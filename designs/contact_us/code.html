@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | AHA Engineering</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary-container": "#932d00",
+                "on-tertiary-container": "#ffb096",
+                "on-tertiary": "#ffffff",
+                "error": "#ba1a1a",
+                "secondary-container": "#d5e0f7",
+                "tertiary-fixed-dim": "#ffb59c",
+                "surface-container-lowest": "#ffffff",
+                "primary-fixed": "#dbe1ff",
+                "on-error-container": "#93000a",
+                "on-surface": "#161c27",
+                "on-primary-fixed-variant": "#003ea6",
+                "primary-fixed-dim": "#b3c5ff",
+                "inverse-on-surface": "#ecf0ff",
+                "surface-variant": "#dde2f3",
+                "outline-variant": "#c3c6d6",
+                "secondary": "#545f72",
+                "on-secondary-container": "#586377",
+                "background": "#f9f9ff",
+                "on-surface-variant": "#434653",
+                "surface-dim": "#d4daea",
+                "secondary-fixed": "#d8e3fa",
+                "surface-tint": "#2156ca",
+                "surface": "#f9f9ff",
+                "surface-container": "#e8eeff",
+                "on-secondary-fixed-variant": "#3c475a",
+                "inverse-primary": "#b3c5ff",
+                "surface-container-low": "#f1f3ff",
+                "on-secondary-fixed": "#111c2c",
+                "secondary-fixed-dim": "#bcc7dd",
+                "tertiary-fixed": "#ffdbcf",
+                "on-primary-container": "#afc1ff",
+                "primary": "#00328a",
+                "tertiary": "#6c1f00",
+                "surface-container-high": "#e3e8f9",
+                "on-background": "#161c27",
+                "inverse-surface": "#2a303d",
+                "on-error": "#ffffff",
+                "on-tertiary-fixed": "#390c00",
+                "surface-bright": "#f9f9ff",
+                "on-primary-fixed": "#00174a",
+                "on-tertiary-fixed-variant": "#832700",
+                "on-primary": "#ffffff",
+                "on-secondary": "#ffffff",
+                "surface-container-highest": "#dde2f3",
+                "primary-container": "#0047bb",
+                "outline": "#737685",
+                "error-container": "#ffdad6"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "unit": "4px",
+                "sidebar-width": "280px",
+                "margin-edge": "32px",
+                "gutter": "24px"
+        },
+        "fontFamily": {
+                "headline-lg": [
+                        "Hanken Grotesk"
+                ],
+                "label-technical": [
+                        "JetBrains Mono"
+                ],
+                "headline-xl": [
+                        "Hanken Grotesk"
+                ],
+                "body-md": [
+                        "IBM Plex Sans"
+                ],
+                "headline-lg-mobile": [
+                        "Hanken Grotesk"
+                ],
+                "body-sm": [
+                        "IBM Plex Sans"
+                ],
+                "sidebar-nav": [
+                        "IBM Plex Sans"
+                ]
+        },
+        "fontSize": {
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-technical": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-xl": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "sidebar-nav": [
+                        "15px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "500"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for industrial feel */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f9f9ff; }
+        ::-webkit-scrollbar-thumb { background: #00328a; border-radius: 0; }
+        
+        .brutalist-border {
+            box-shadow: 4px 4px 0px 0px #00328a;
+        }
+        
+        .input-focus-effect:focus {
+            outline: none;
+            border-width: 2px;
+            border-color: #0047bb;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-white">
+<aside class="fixed inset-0 z-[60] -translate-x-full transition-transform duration-300 ease-in-out" id="sidebar">
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-sm" onclick="document.getElementById('sidebar').classList.add('-translate-x-full')"></div>
+<nav class="relative w-[sidebar-width] h-full bg-surface border-r-2 border-outline-variant flex flex-col">
+<div class="p-6 border-b-2 border-outline-variant flex justify-between items-center">
+<h2 class="font-headline-lg-mobile text-primary uppercase font-bold">Menu</h2>
+<button class="material-symbols-outlined text-primary" onclick="document.getElementById('sidebar').classList.add('-translate-x-full')">close</button>
+</div>
+<div class="flex-1 py-6">
+<a class="flex items-center gap-4 px-6 py-4 hover:bg-surface-container transition-colors text-on-surface-variant font-sidebar-nav uppercase" href="#">
+<span class="material-symbols-outlined">home</span> Home
+      </a>
+<a class="flex items-center gap-4 px-6 py-4 hover:bg-surface-container transition-colors text-on-surface-variant font-sidebar-nav uppercase" href="#">
+<span class="material-symbols-outlined">foundation</span> Verticals
+      </a>
+<a class="flex items-center gap-4 px-6 py-4 hover:bg-surface-container transition-colors text-on-surface-variant font-sidebar-nav uppercase" href="#">
+<span class="material-symbols-outlined">engineering</span> Projects
+      </a>
+<a class="flex items-center gap-4 px-6 py-4 hover:bg-surface-container transition-colors text-on-surface-variant font-sidebar-nav uppercase" href="#">
+<span class="material-symbols-outlined">work</span> Careers
+      </a>
+<a class="flex items-center gap-4 px-6 py-4 bg-primary text-on-primary font-sidebar-nav uppercase" href="#">
+<span class="material-symbols-outlined">contact_support</span> Contact
+      </a>
+</div>
+<div class="p-6 border-t border-outline-variant">
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">AHA Engineering v1.0</p>
+</div>
+</nav>
+</aside>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b-2 border-outline-variant flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary active:scale-95 transition-transform" onclick="document.getElementById('sidebar').classList.remove('-translate-x-full')">menu</button>
+<h1 class="font-headline-lg-mobile uppercase font-bold text-primary tracking-tight">AHA ENGINEERING</h1>
+</div>
+<button class="bg-primary text-white px-4 py-1 font-label-technical text-[12px] brutalist-border uppercase active:opacity-80 transition-opacity">
+            REQUEST QUOTE
+        </button>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-64 flex items-end overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center scale-105 filter grayscale-[20%]" data-alt="Industrial infrastructure" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAF9RqZF9VtpP5QQXyAOPNftIdwBTOW5sncIToxb7fS1WQv78ekJeFwlh7a4NUxfiBDyJ4eaAn6yFrX1Xfdt3maMhExlXzJKWGX90wb_c7MQtaC1YP3O7aKn5Sf6LY8C13enq9kX2STE508uUzgSZ_V8oQBJzkeQPvgAXxwK8wEsjYqhmoFiOx-WTNVNPB6Cs3S0jbu9A782wWlTFPdiH78puLlrF3QYMPCGh3E-bVpPdwUuV4xLeZbOLlqHdpLmQKDyj9b6eld46pK')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+<div class="relative w-full px-8 pb-8">
+<span class="font-label-technical text-primary-fixed-dim uppercase mb-2 block">Contact</span>
+<h2 class="font-headline-xl text-white uppercase">GET IN TOUCH</h2>
+</div>
+</section>
+<!-- Main Content Grid -->
+<div class="px-8 py-10 space-y-12">
+<!-- Contact Form Section -->
+<section class="space-y-6">
+<div class="border-l-4 border-primary pl-4">
+<h3 class="font-headline-lg-mobile text-primary uppercase">Project Inquiry</h3>
+<p class="font-body-md text-on-surface-variant">Submit your technical specifications or project requirements below.</p>
+</div>
+<form class="space-y-4">
+<div class="space-y-1">
+<label class="font-label-technical text-outline uppercase">Full Name</label>
+<input class="w-full bg-surface-container border-outline-variant border-b-2 p-3 font-body-md input-focus-effect transition-all" placeholder="Enter name" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-technical text-outline uppercase">Corporate Email</label>
+<input class="w-full bg-surface-container border-outline-variant border-b-2 p-3 font-body-md input-focus-effect transition-all" placeholder="email@company.com" type="email"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-technical text-outline uppercase">Industry Segment</label>
+<select class="w-full bg-surface-container border-outline-variant border-b-2 p-3 font-body-md input-focus-effect transition-all">
+<option>Infrastructure</option>
+<option>Energy &amp; Utilities</option>
+<option>Hydrocarbons</option>
+<option>Industrial Manufacturing</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-technical text-outline uppercase">Project Brief</label>
+<textarea class="w-full bg-surface-container border-outline-variant border-b-2 p-3 font-body-md input-focus-effect transition-all" placeholder="Outline your project scope..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-white py-4 font-headline-lg-mobile text-[18px] uppercase tracking-wider flex justify-center items-center gap-2 hover:bg-primary-container transition-colors active:scale-[0.98]" type="submit">
+                        SEND INQUIRY
+                        <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</section>
+<!-- Location & Map -->
+<section class="space-y-6">
+<div class="border-l-4 border-primary pl-4">
+<h3 class="font-headline-lg-mobile text-primary uppercase">Headquarters</h3>
+</div>
+<div class="bg-surface-container-high border-2 border-outline-variant p-6 space-y-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<div>
+<h4 class="font-label-technical text-primary uppercase font-bold">Hyderabad Office</h4>
+<p class="font-body-md text-on-surface mt-1">MEIL, S-2, Technocrat Ind. Estate, Balanagar, Hyderabad, India.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">call</span>
+<div>
+<h4 class="font-label-technical text-primary uppercase font-bold">Direct Line</h4>
+<a class="font-body-md text-on-surface hover:text-primary transition-colors" href="tel:+914012345678">+91 40 1234 5678</a>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">mail</span>
+<div>
+<h4 class="font-label-technical text-primary uppercase font-bold">Official Correspondence</h4>
+<a class="font-body-md text-on-surface hover:text-primary transition-colors" href="mailto:info@ahaengineering.com">info@ahaengineering.com</a>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="relative w-full aspect-video border-2 border-outline-variant grayscale hover:grayscale-0 transition-all overflow-hidden group">
+<div class="absolute inset-0 bg-surface-dim flex items-center justify-center">
+<img class="w-full h-full object-cover opacity-60" data-location="Hyderabad" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChIl568xsWzlRllRQzjNprcMqCFQVMhmnLjfcOYdjDtOqgW8F_S5IakuFtu8jS_CwXvXDQNujNzNcn6I-2dLiGjfDiZDk4DKXBVuEwZFOxrIq3VyZQQqQTtwUrqkDhLiU-Y8VSYVV6v88m9BklCcqwRaCXpmlCY6PvpZ5pWBLXEyvubRqeNeHhwLsTUkzPNAh2nFCtHuHYbTFnuvRH3b7DAMkJuSIzh4d6qvMo8GxexXpPN7IjE6hMH-8kfpimQ45lnCtcZVIhdfnE"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="bg-white p-3 brutalist-border flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-label-technical text-on-surface uppercase font-bold">View Location</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Secondary CTA / Support -->
+<section class="bg-primary text-white p-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 opacity-10 scale-150 -translate-y-1/2 translate-x-1/2 text-white">
+<span class="material-symbols-outlined text-[120px]">engineering</span>
+</div>
+<div class="relative z-10 space-y-4">
+<h3 class="font-headline-lg-mobile uppercase">Career Opportunities</h3>
+<p class="font-body-md text-primary-fixed">We are always looking for technical excellence. Join our team of world-class engineers.</p>
+<a class="inline-flex items-center gap-2 text-primary-fixed-dim font-label-technical uppercase tracking-widest group" href="#">
+                        EXPLORE CAREERS 
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-highest border-t-4 border-primary flex flex-col gap-6 p-8">
+<div class="flex flex-col gap-4">
+<h2 class="font-headline-lg-mobile text-primary uppercase font-bold">AHA ENGINEERING</h2>
+<p class="font-body-md text-on-surface-variant">Precision Engineering. Infrastructure Excellence. Global Standards.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Infrastructure</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Energy</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Hydrocarbons</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Manufacturing</a>
+</div>
+<div class="pt-6 border-t border-outline-variant">
+<p class="font-body-sm text-on-surface-variant">
+                © 2024 AHA Engineering. Hyderabad Office: MEIL, S-2, Technocrat Ind. Estate, Balanagar.
+            </p>
+</div>
+</footer>
+<script>
+        // Simple form interaction simulation
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'PROCESSING...';
+            btn.classList.add('opacity-50');
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = 'SUCCESSFULLY SENT';
+                btn.classList.remove('bg-primary');
+                btn.classList.add('bg-green-600');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('bg-green-600', 'opacity-50');
+                    btn.classList.add('bg-primary');
+                    btn.disabled = false;
+                    e.target.reset();
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body></html>

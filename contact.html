@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | AHA Engineering</title>
+  <meta name="description" content="Get in touch with AHA Engineering. Submit project requirements, view corporate office details in Hyderabad, or contact business divisions."/>
+  
+  <!-- Open Graph / Share Tags -->
+  <meta property="og:title" content="Contact Us | AHA Engineering"/>
+  <meta property="og:description" content="Submit technical specifications for project inquiry or get corporate direct line contact details."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="assets/images/hero-contact.png"/>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  
+  <!-- JS Script -->
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Top App Bar Header -->
+  <header class="header-fixed" id="site-header">
+    <div class="hq-row" style="align-items: center; gap: 16px;">
+      <button class="material-symbols-outlined" id="menu-toggle" aria-label="Open Navigation Menu" style="background: none; border: none; color: var(--color-primary); cursor: pointer; padding: 4px;">menu</button>
+      <a href="index.html" style="text-decoration: none;"><h1 class="font-headline-lg-mobile uppercase font-bold text-primary tracking-tighter" style="color: var(--color-primary); margin: 0; font-size: 20px;">AHA ENGINEERING</h1></a>
+    </div>
+    <a href="contact.html" class="btn-primary brutalist-border" id="btn-request-quote">REQUEST QUOTE</a>
+  </header>
+
+  <!-- Navigation Drawer Sidebar -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <aside class="sidebar-drawer" id="sidebar-drawer">
+    <div class="sidebar-header">
+      <span class="font-headline-lg-mobile text-primary font-bold uppercase tracking-tight" style="color: var(--color-primary);">Navigation</span>
+      <button class="material-symbols-outlined" id="sidebar-close" aria-label="Close Navigation Menu" style="background: none; border: none; color: var(--color-primary); cursor: pointer; padding: 4px;">close</button>
+    </div>
+    <nav class="sidebar-nav">
+      <a class="sidebar-link" href="index.html" id="link-nav-home">
+        <span class="material-symbols-outlined">home</span> HOME
+      </a>
+      <a class="sidebar-link" href="about.html" id="link-nav-about">
+        <span class="material-symbols-outlined">info</span> ABOUT US
+      </a>
+      <a class="sidebar-link" href="index.html#competencies" id="link-nav-verticals">
+        <span class="material-symbols-outlined">layers</span> VERTICALS
+      </a>
+      <a class="sidebar-link" href="index.html#projects" id="link-nav-projects">
+        <span class="material-symbols-outlined">construction</span> PROJECTS
+      </a>
+      <a class="sidebar-link" href="about.html#values" id="link-nav-careers">
+        <span class="material-symbols-outlined">work</span> CAREERS
+      </a>
+      <a class="sidebar-link active" href="contact.html" id="link-nav-contact">
+        <span class="material-symbols-outlined">mail</span> CONTACT
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <p class="font-label-technical text-outline uppercase" style="color: var(--color-outline); margin: 0;">Global Support</p>
+      <p class="font-body-sm text-on-surface-variant" style="color: var(--color-on-surface-variant); margin: 8px 0 0 0; font-weight: 500;">+91 40 2307 6501</p>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <main class="main-content">
+    
+    <!-- Hero Section -->
+    <section class="hero-section" id="contact-hero" style="height: 256px;">
+      <div class="hero-parallax-bg" style="background-image: url('assets/images/hero-contact.png'); bottom: -50px; filter: grayscale(20%);"></div>
+      <div class="hero-overlay" style="background: linear-gradient(to top, var(--color-primary) 0%, rgba(0, 50, 138, 0.4) 60%, transparent 100%);"></div>
+      <div class="hero-content" style="margin-bottom: 32px;">
+        <span class="font-label-technical uppercase" style="color: var(--color-primary-fixed-dim); display: block; margin-bottom: 8px;">Contact</span>
+        <h2 class="font-headline-xl text-white uppercase" style="color: white; margin: 0;">GET IN TOUCH</h2>
+      </div>
+    </section>
+
+    <!-- Main Content Layout Grid -->
+    <div class="container-grid py-16 contact-layout" style="display: grid; grid-template-columns: 1fr; gap: 48px;">
+      
+      <!-- Inquiry Form Section -->
+      <section class="scroll-animate" id="inquiry-form-section" style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="headline-border-left">
+          <h3 class="font-headline-lg-mobile text-primary uppercase" style="color: var(--color-primary); margin: 0 0 8px 0;">Project Inquiry</h3>
+          <p class="font-body-md text-on-surface-variant" style="color: var(--color-on-surface-variant); margin: 0;">
+            Submit your technical specifications or project requirements below.
+          </p>
+        </div>
+        
+        <form class="hq-row" id="project-inquiry-form" style="flex-direction: column; gap: 16px; align-items: stretch; width: 100%;">
+          <div class="form-group">
+            <label class="form-label" for="input-name">Full Name</label>
+            <input class="form-input" id="input-name" placeholder="Enter name" type="text" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="input-email">Corporate Email</label>
+            <input class="form-input" id="input-email" placeholder="email@company.com" type="email" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="input-segment">Industry Segment</label>
+            <select class="form-input" id="input-segment" name="segment">
+              <option value="infrastructure">Infrastructure</option>
+              <option value="energy">Energy & Utilities</option>
+              <option value="hydrocarbons">Hydrocarbons</option>
+              <option value="manufacturing">Industrial Manufacturing</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="input-brief">Project Brief</label>
+            <textarea class="form-input" id="input-brief" placeholder="Outline your project scope..." rows="4" required></textarea>
+          </div>
+          <button class="btn-primary btn-submit brutalist-border" id="btn-submit-inquiry" type="submit" style="width: 100%; justify-content: center; padding: 16px; font-size: 16px;">
+            SEND INQUIRY <span class="material-symbols-outlined">send</span>
+          </button>
+        </form>
+      </section>
+
+      <!-- Location & Contact Info Section -->
+      <section class="scroll-animate" id="hq-info-section" style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="headline-border-left">
+          <h3 class="font-headline-lg-mobile text-primary uppercase" style="color: var(--color-primary); margin: 0;">Headquarters</h3>
+        </div>
+        
+        <!-- Address card -->
+        <div class="hq-card brutalist-border">
+          <div class="hq-row">
+            <span class="material-symbols-outlined">location_on</span>
+            <div>
+              <h4>Hyderabad Office</h4>
+              <p>MEIL, S-2, Technocrat Ind. Estate, Balanagar, Hyderabad, India.</p>
+            </div>
+          </div>
+          <div class="hq-row">
+            <span class="material-symbols-outlined">call</span>
+            <div>
+              <h4>Direct Line</h4>
+              <a href="tel:+914012345678">+91 40 1234 5678</a>
+            </div>
+          </div>
+          <div class="hq-row">
+            <span class="material-symbols-outlined">mail</span>
+            <div>
+              <h4>Official Correspondence</h4>
+              <a href="mailto:info@ahaengineering.com">info@ahaengineering.com</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Interactive Map visual -->
+        <div class="map-container brutalist-border" onclick="window.open('https://maps.google.com/?q=MEIL+Balanagar+Hyderabad')">
+          <img src="assets/images/map-hyderabad.png" alt="Balanagar Hyderabad Map Location" class="map-img" width="800" height="450"/>
+          <div class="map-overlay">
+            <div class="map-badge">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+              <span>View Location</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Career Opportunities CTA -->
+    <div class="container-grid pb-24 scroll-animate" id="careers-cta">
+      <section style="background-color: var(--color-primary); color: white; padding: 32px; position: relative; overflow: hidden; border: 1px solid var(--color-outline);">
+        <div style="position: absolute; top: 0; right: 0; opacity: 0.1; transform: scale(1.5) translate(15%, -15%); color: white; pointer-events: none;">
+          <span class="material-symbols-outlined" style="font-size: 120px;">engineering</span>
+        </div>
+        <div style="position: relative; z-index: 10; display: flex; flex-direction: column; gap: 16px;">
+          <h3 class="font-headline-lg-mobile uppercase" style="color: white; margin: 0;">Career Opportunities</h3>
+          <p class="font-body-md text-primary-fixed" style="color: var(--color-primary-fixed); margin: 0; max-width: 480px;">
+            We are always looking for technical excellence. Join our team of world-class engineers.
+          </p>
+          <a class="font-label-technical uppercase" href="about.html#values" style="color: var(--color-inverse-primary); text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 8px;">
+            EXPLORE CAREERS <span class="material-symbols-outlined" style="font-size: 14px;">arrow_forward</span>
+          </a>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer style="background-color: var(--color-surface-container-highest); border-top: 1px solid var(--color-outline-variant); padding: 48px var(--spacing-margin-edge) 32px var(--spacing-margin-edge);">
+    <div class="container-grid" style="padding: 0;">
+      <div style="display: flex; flex-direction: column; gap: 32px;">
+        <div class="font-headline-lg-mobile text-primary font-bold uppercase tracking-tighter" style="color: var(--color-primary);">AHA Engineering</div>
+        
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
+          <!-- Column 1 -->
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <span class="font-label-technical uppercase" style="color: var(--color-outline); font-weight: 700; font-size: 10px;">Divisions</span>
+            <a class="font-body-sm text-on-surface hover:text-primary transition-colors" href="index.html#competencies" style="color: var(--color-on-surface); text-decoration: none;">Infrastructure</a>
+            <a class="font-body-sm text-on-surface hover:text-primary transition-colors" href="index.html#competencies" style="color: var(--color-on-surface); text-decoration: none;">Energy</a>
+            <a class="font-body-sm text-on-surface hover:text-primary transition-colors" href="index.html#competencies" style="color: var(--color-on-surface); text-decoration: none;">Hydrocarbons</a>
+            <a class="font-body-sm text-on-surface hover:text-primary transition-colors" href="index.html#competencies" style="color: var(--color-on-surface); text-decoration: none;">Manufacturing</a>
+          </div>
+          <!-- Column 2 -->
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <span class="font-label-technical uppercase" style="color: var(--color-outline); font-weight: 700; font-size: 10px;">Company</span>
+            <a class="font-body-sm text-on-surface hover:text-primary transition-colors" href="about.html" style="color: var(--color-on-surface); text-decoration: none;">About Us</a>
+            <a class="font-body-sm text-on-surface hover:text-primary transition-colors" href="index.html#projects" style="color: var(--color-on-surface); text-decoration: none;">Projects</a>
+            <a class="font-body-sm text-on-surface hover:text-primary transition-colors" href="about.html#values" style="color: var(--color-on-surface); text-decoration: none;">Careers</a>
+            <a class="font-body-sm text-on-surface hover:text-primary transition-colors" href="contact.html" style="color: var(--color-on-surface); text-decoration: none;">Contact</a>
+          </div>
+        </div>
+        
+        <div style="border-top: 1px solid var(--color-outline-variant); padding-top: 24px; margin-top: 16px;">
+          <p class="font-body-sm text-on-surface-variant" style="color: var(--color-on-surface-variant); margin: 0; line-height: 1.6;">
+            © 2024 AHA Engineering. Hyderabad Office: MEIL, S-2, Technocrat Ind. Estate, Balanagar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script segments router logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check query parameter to auto-select form drop down option if redirected from competencies cards
+      const urlParams = new URLSearchParams(window.location.search);
+      const segment = urlParams.get('segment');
+      const segmentDropdown = document.getElementById('input-segment');
+      if (segmentDropdown && segment) {
+        if (segment === 'valves' || segment === 'piping' || segment === 'machinery') {
+          if (segment === 'valves') segmentDropdown.value = 'hydrocarbons';
+          else if (segment === 'piping') segmentDropdown.value = 'infrastructure';
+          else if (segment === 'machinery') segmentDropdown.value = 'energy';
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AHA Engineering | Global Infrastructure</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#932d00",
+                        "on-tertiary-container": "#ffb096",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#d5e0f7",
+                        "tertiary-fixed-dim": "#ffb59c",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#dbe1ff",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#161c27",
+                        "on-primary-fixed-variant": "#003ea6",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "inverse-on-surface": "#ecf0ff",
+                        "surface-variant": "#dde2f3",
+                        "outline-variant": "#c3c6d6",
+                        "secondary": "#545f72",
+                        "on-secondary-container": "#586377",
+                        "background": "#f9f9ff",
+                        "on-surface-variant": "#434653",
+                        "surface-dim": "#d4daea",
+                        "secondary-fixed": "#d8e3fa",
+                        "surface-tint": "#2156ca",
+                        "surface": "#f9f9ff",
+                        "surface-container": "#e8eeff",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "inverse-primary": "#b3c5ff",
+                        "surface-container-low": "#f1f3ff",
+                        "on-secondary-fixed": "#111c2c",
+                        "secondary-fixed-dim": "#bcc7dd",
+                        "tertiary-fixed": "#ffdbcf",
+                        "on-primary-container": "#afc1ff",
+                        "primary": "#00328a",
+                        "tertiary": "#6c1f00",
+                        "surface-container-high": "#e3e8f9",
+                        "on-background": "#161c27",
+                        "inverse-surface": "#2a303d",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#390c00",
+                        "surface-bright": "#f9f9ff",
+                        "on-primary-fixed": "#00174a",
+                        "on-tertiary-fixed-variant": "#832700",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#dde2f3",
+                        "primary-container": "#0047bb",
+                        "outline": "#737685",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "sidebar-width": "280px",
+                        "margin-edge": "32px",
+                        "gutter": "24px",
+                        "touch-target": "3rem",
+                        "section-gap": "6rem"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-technical": ["JetBrains Mono"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "body-md": ["IBM Plex Sans"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-sm": ["IBM Plex Sans"],
+                        "sidebar-nav": ["IBM Plex Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-technical": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "sidebar-nav": ["15px", {"lineHeight": "24px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .brutalist-border {
+            border: 1px solid #737685;
+        }
+        .industrial-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 95% 100%, 0 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-white overflow-x-hidden">
+<!-- Standardized Sidebar -->
+<aside class="fixed inset-0 z-[60] flex transition-transform duration-300 -translate-x-full" id="sidebar">
+<div class="w-sidebar-width bg-surface-container-low border-r border-outline-variant h-full flex flex-col p-8">
+<div class="flex justify-between items-center mb-10">
+<span class="font-headline-lg-mobile text-primary font-bold uppercase tracking-tight">Navigation</span>
+<button class="material-symbols-outlined text-primary hover:bg-surface-container-high p-2 rounded-full transition-colors" onclick="document.getElementById('sidebar').classList.add('-translate-x-full')">close</button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="font-sidebar-nav text-on-surface hover:text-primary hover:bg-surface-container px-4 py-3 rounded transition-all flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-xl">layers</span> Verticals
+                </a>
+<a class="font-sidebar-nav text-on-surface hover:text-primary hover:bg-surface-container px-4 py-3 rounded transition-all flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-xl">construction</span> Projects
+                </a>
+<a class="font-sidebar-nav text-primary bg-surface-container-high px-4 py-3 rounded transition-all flex items-center gap-3 font-semibold" href="#">
+<span class="material-symbols-outlined text-xl">terminal</span> Technical Specs
+                </a>
+<a class="font-sidebar-nav text-on-surface hover:text-primary hover:bg-surface-container px-4 py-3 rounded transition-all flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-xl">info</span> About Us
+                </a>
+<a class="font-sidebar-nav text-on-surface hover:text-primary hover:bg-surface-container px-4 py-3 rounded transition-all flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-xl">mail</span> Contact
+                </a>
+</nav>
+<div class="mt-auto pt-6 border-t border-outline-variant">
+<p class="font-label-technical text-[10px] text-outline uppercase">Global Support</p>
+<p class="font-body-sm text-on-surface-variant mt-2">+91 40 2307 6501</p>
+</div>
+</div>
+<div class="flex-1 bg-black/40 backdrop-blur-[2px]" onclick="document.getElementById('sidebar').classList.add('-translate-x-full')"></div>
+</aside>
+<!-- Header -->
+<header class="fixed top-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant flex justify-between items-center px-6 w-full h-[72px]">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary active:scale-95 transition-transform p-1" onclick="document.getElementById('sidebar').classList.remove('-translate-x-full')">menu</button>
+<h1 class="font-headline-lg-mobile uppercase font-bold text-primary tracking-tighter text-[20px]">AHA ENGINEERING</h1>
+</div>
+<button class="bg-primary text-white px-4 py-2 font-label-technical text-[12px] brutalist-border uppercase active:opacity-80 transition-all hover:bg-primary-container">
+            REQUEST QUOTE
+        </button>
+</header>
+<main class="pt-[72px]">
+<!-- Hero Section -->
+<section class="relative w-full h-[85vh] flex flex-col justify-end">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A massive, high-contrast photograph of heavy industrial machinery at a global construction site during the golden hour. Intense orange light catches the metallic edges of large cranes and structural steel components, creating a scene of raw engineering power. The aesthetic is professional and corporate with a brutalist edge, using deep shadows and vibrant highlights. The composition is dynamic, emphasizing the enormous scale of global infrastructure development." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBv29-3Lare-brVLAfz7gV9TAS7mMZB6AMsyptSSxrO909TXEYSGgULd2vCs1E9m3S1k5dW97W3YD3Y5hjcfauON5MegpytSFUMJfswmsb4bdMrYNJkTuZOeeKTKhOKnBnAk2Ms40d_XrFSsdpZTU3GiYqT0kvYLTxI_2otQDhbiKwaNMdNHcsRud5HZOZ11mga8HR-iF52-gxJZb-Bs6ya4y4PNx5Cr-tiMCclPln7Yj1BB2tO1gh15bfta2OJANIOXRKdcYf09MCl')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+</div>
+<div class="relative z-10 p-8 mb-section-gap">
+<div class="inline-block bg-primary text-white px-4 py-2 font-label-technical text-label-technical uppercase mb-4 industrial-clip">
+                    Global Infrastructure Leader
+                </div>
+<h2 class="font-headline-xl text-white uppercase mb-6 max-w-sm">
+                    Engineering the Future of Global Infrastructure
+                </h2>
+<div class="flex gap-4">
+<button class="bg-primary text-white px-6 py-4 font-label-technical uppercase brutalist-border flex items-center gap-2 active:scale-95 transition-all hover:bg-primary-container shadow-xl">
+                        Explore Our Solutions
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Core Competencies -->
+<section class="py-section-gap px-8 bg-surface-container-low">
+<div class="flex flex-col gap-2 mb-12">
+<span class="font-label-technical text-label-technical text-primary uppercase">Specialized Solutions</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile uppercase border-l-4 border-primary pl-4">Core Competencies</h3>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<!-- Valve Systems -->
+<div class="bg-surface brutalist-border p-6 flex flex-col gap-4 group hover:bg-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-primary text-4xl group-hover:text-white transition-colors">settings_input_component</span>
+<h4 class="font-headline-lg-mobile uppercase group-hover:text-white transition-colors">High-Pressure Valve Systems</h4>
+<p class="text-on-surface-variant group-hover:text-primary-fixed transition-colors">Precision-engineered flow control solutions for hydrocarbon and hydraulic infrastructure.</p>
+<div class="h-1 w-12 bg-primary group-hover:bg-white transition-colors"></div>
+</div>
+<!-- Industrial Piping -->
+<div class="bg-surface brutalist-border p-6 flex flex-col gap-4 group hover:bg-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-primary text-4xl group-hover:text-white transition-colors">polyline</span>
+<h4 class="font-headline-lg-mobile uppercase group-hover:text-white transition-colors">Strategic Industrial Piping</h4>
+<p class="text-on-surface-variant group-hover:text-primary-fixed transition-colors">Custom-fabricated piping networks designed for extreme durability in harsh industrial environments.</p>
+<div class="h-1 w-12 bg-primary group-hover:bg-white transition-colors"></div>
+</div>
+<!-- Heavy Machineries -->
+<div class="bg-surface brutalist-border p-6 flex flex-col gap-4 group hover:bg-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-primary text-4xl group-hover:text-white transition-colors">engineering</span>
+<h4 class="font-headline-lg-mobile uppercase group-hover:text-white transition-colors">Custom Machineries</h4>
+<p class="text-on-surface-variant group-hover:text-primary-fixed transition-colors">Advanced mechanical units and heavy-duty fabrication for large-scale energy and hydro projects.</p>
+<div class="h-1 w-12 bg-primary group-hover:bg-white transition-colors"></div>
+</div>
+</div>
+</section>
+<!-- International Transport / Reach -->
+<section class="py-section-gap bg-primary text-white overflow-hidden">
+<div class="px-8 mb-8">
+<span class="font-label-technical text-label-technical text-primary-fixed-dim uppercase block mb-2">Network Expansion</span>
+<h3 class="font-headline-xl uppercase mb-4 leading-tight">Unrivaled Global Reach</h3>
+<p class="font-body-md text-primary-fixed max-w-md">Our logistics and transportation network ensures technical precision is delivered to the most remote infrastructure sites worldwide.</p>
+</div>
+<div class="relative w-full aspect-square px-8">
+<div class="w-full h-full brutalist-border bg-primary-container relative overflow-hidden flex items-center justify-center">
+<!-- Map Graphic Simulation -->
+<div class="absolute inset-0 opacity-20">
+<div class="w-full h-full" style="background-image: radial-gradient(#b3c5ff 1px, transparent 1px); background-size: 20px 20px;"></div>
+</div>
+<div class="z-10 text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-7xl text-primary-fixed-dim mb-4">public</span>
+<div class="flex flex-wrap justify-center gap-4 px-4">
+<div class="bg-primary/60 backdrop-blur-md px-3 py-1 brutalist-border font-label-technical text-[10px] uppercase text-white">HYDERABAD</div>
+<div class="bg-primary/60 backdrop-blur-md px-3 py-1 brutalist-border font-label-technical text-[10px] uppercase text-white">DUBAI</div>
+<div class="bg-primary/60 backdrop-blur-md px-3 py-1 brutalist-border font-label-technical text-[10px] uppercase text-white">SINGAPORE</div>
+<div class="bg-primary/60 backdrop-blur-md px-3 py-1 brutalist-border font-label-technical text-[10px] uppercase text-white">LONDON</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Landmark Projects -->
+<section class="py-section-gap px-8">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="font-label-technical text-label-technical text-primary uppercase">Project Portfolio</span>
+<h3 class="font-headline-xl uppercase">Landmark Work</h3>
+</div>
+<span class="material-symbols-outlined text-4xl text-outline-variant">grid_view</span>
+</div>
+<div class="grid grid-cols-1 gap-12">
+<!-- Project 1 -->
+<div class="flex flex-col gap-4">
+<div class="relative brutalist-border h-64 overflow-hidden group">
+<img alt="Polavaram Spillway Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLsxyqM9OvMAOx1pMGS_YX0iqlcA5pxEIAwE3EeewEYRl41DaQFqjK79x2G71fvCZG3LZslxpOSqgXH-o-UdN1zMehY86MT9OV74qolcJOJ19CkET3FXXKTSAjOFp_691w6AJ5-6NSG9AS6xV5-n6QFAREHY6Yiy8s03VjWigEIJJYn9tKfOsOVYOxA8y9xUhS1tuAr9UcjA7WIZ52wW_8Bj-75oMxVeqh7oebV5sbMZpBm_1xudlY9__w88"/>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 font-label-technical text-[10px] uppercase">In Progress</div>
+</div>
+<div>
+<h4 class="font-headline-lg-mobile uppercase text-primary">Polavaram Irrigation Complex</h4>
+<p class="font-body-md text-on-surface-variant mb-4">A massive spillway engineering marvel designed to regulate seasonal water flow and energy generation.</p>
+<a class="font-label-technical text-label-technical text-primary uppercase flex items-center gap-2 font-bold hover:gap-3 transition-all" href="#">
+                            View Case Study <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="flex flex-col gap-4">
+<div class="relative brutalist-border h-64 overflow-hidden group">
+<img alt="Kaleshwaram Lift Irrigation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLvKuehxGBpXCQvVEODVpTs9uLaxTTOLJiA7TmL3o-Eroi5_zpVrrsKfygxKzvCM4wjM8yqisYZPTNKRtqR9MbAmWmsJ_owBQ3CqW6z6kaMajmrYJNLRJVuELL5iWw4LH07rnuVbLlNuNT_0oq7nnbmoluQpwi91AvISxH13u2hB5CWM_-Mp5Y0817-EY063HTQbEpIPpoIKuRwGFAaN_cHnzvhy1AhAGXoR-CQdbuNxam8j2Ld3d43GlTQ"/>
+<div class="absolute top-4 left-4 bg-primary-container text-white px-3 py-1 font-label-technical text-[10px] uppercase border border-primary">Completed</div>
+</div>
+<div>
+<h4 class="font-headline-lg-mobile uppercase text-primary">Kaleshwaram Strategic Hub</h4>
+<p class="font-body-md text-on-surface-variant mb-4">World-class lift irrigation infrastructure showcasing AHA's capability in heavy machinery installation.</p>
+<a class="font-label-technical text-label-technical text-primary uppercase flex items-center gap-2 font-bold hover:gap-3 transition-all" href="#">
+                            View Case Study <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap px-8 bg-surface-container-high border-t-4 border-primary">
+<div class="text-center">
+<h3 class="font-headline-xl uppercase mb-6 leading-tight">Partner With Global Experts</h3>
+<p class="font-body-md text-on-surface-variant mb-10 text-lg">We bring technical excellence and structural integrity to every project, regardless of scale.</p>
+<div class="flex flex-col gap-4">
+<button class="bg-primary text-white px-8 py-5 font-headline-lg-mobile uppercase brutalist-border hover:bg-primary-container transition-all active:scale-95">
+                        Explore Our Solutions
+                    </button>
+<button class="bg-white text-primary px-8 py-5 font-headline-lg-mobile uppercase brutalist-border hover:bg-surface-dim transition-all active:scale-95">
+                        Contact Divisions
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t border-outline-variant flex flex-col gap-8 p-8 w-full">
+<div class="flex flex-col gap-8">
+<div class="font-headline-lg-mobile text-primary font-bold uppercase tracking-tighter">AHA Engineering</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-3">
+<span class="font-label-technical text-[10px] text-outline uppercase font-bold tracking-widest">Divisions</span>
+<a class="font-body-sm text-on-surface hover:text-primary transition-colors" href="#">Infrastructure</a>
+<a class="font-body-sm text-on-surface hover:text-primary transition-colors" href="#">Energy</a>
+<a class="font-body-sm text-on-surface hover:text-primary transition-colors" href="#">Hydrocarbons</a>
+<a class="font-body-sm text-on-surface hover:text-primary transition-colors" href="#">Manufacturing</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-technical text-[10px] text-outline uppercase font-bold tracking-widest">Company</span>
+<a class="font-body-sm text-on-surface hover:text-primary transition-colors" href="#">About Us</a>
+<a class="font-body-sm text-on-surface hover:text-primary transition-colors" href="#">Projects</a>
+<a class="font-body-sm text-on-surface hover:text-primary transition-colors" href="#">Careers</a>
+<a class="font-body-sm text-on-surface hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant">
+<p class="font-body-sm text-on-surface-variant leading-relaxed">
+                    © 2024 AHA Engineering. Hyderabad Office: MEIL, S-2, Technocrat Ind. Estate, Balanagar.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroBg = document.querySelector('[data-alt*="industrial machinery"]');
+            if (heroBg) {
+                heroBg.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | AHA Engineering</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=IBM+Plex+Sans:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .structural-grid {
+            background-image: radial-gradient(circle, #4A4A4A 1px, transparent 1px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#932d00",
+                        "on-tertiary-container": "#ffb096",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#d5e0f7",
+                        "tertiary-fixed-dim": "#ffb59c",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#dbe1ff",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#dde2f3",
+                        "on-surface": "#161c27",
+                        "on-primary-fixed-variant": "#003ea6",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "inverse-on-surface": "#ecf0ff",
+                        "outline-variant": "#c3c6d6",
+                        "secondary": "#545f72",
+                        "on-secondary-container": "#586377",
+                        "background": "#f9f9ff",
+                        "on-surface-variant": "#434653",
+                        "surface-dim": "#d4daea",
+                        "secondary-fixed": "#d8e3fa",
+                        "surface-tint": "#2156ca",
+                        "surface": "#f9f9ff",
+                        "surface-container": "#e8eeff",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "inverse-primary": "#b3c5ff",
+                        "surface-container-low": "#f1f3ff",
+                        "on-secondary-fixed": "#111c2c",
+                        "secondary-fixed-dim": "#bcc7dd",
+                        "tertiary-fixed": "#ffdbcf",
+                        "on-primary-container": "#afc1ff",
+                        "primary": "#00328a",
+                        "tertiary": "#6c1f00",
+                        "surface-container-high": "#e3e8f9",
+                        "on-background": "#161c27",
+                        "inverse-surface": "#2a303d",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#390c00",
+                        "surface-bright": "#f9f9ff",
+                        "on-primary-fixed": "#00174a",
+                        "on-tertiary-fixed-variant": "#832700",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#dde2f3",
+                        "primary-container": "#0047bb",
+                        "outline": "#737685",
+                        "error-container": "#ffdad6",
+                        "concrete-dark": "#4A4A4A"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "sidebar-width": "280px",
+                        "margin-edge": "32px",
+                        "gutter": "24px",
+                        "component-gap": "1rem",
+                        "grid-margin": "2rem",
+                        "touch-target": "3rem",
+                        "section-gap": "6rem",
+                        "grid-gutter": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-technical": ["JetBrains Mono"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "body-md": ["IBM Plex Sans"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-sm": ["IBM Plex Sans"],
+                        "sidebar-nav": ["IBM Plex Sans"],
+                        "display-hero": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-technical": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "sidebar-nav": ["15px", { "lineHeight": "24px", "fontWeight": "500" }],
+                        "display-hero": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary selection:text-white">
+<!-- Standardized Sidebar Drawer -->
+<div class="fixed inset-0 z-[60] hidden" id="sidebar-drawer">
+<div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="sidebar-overlay"></div>
+<aside class="absolute left-0 top-0 h-full w-sidebar-width bg-surface border-r border-outline-variant flex flex-col">
+<div class="p-margin-edge border-b border-outline-variant">
+<h2 class="font-headline-lg text-primary uppercase text-xl">AHA Engineering</h2>
+</div>
+<nav class="flex-1 py-4">
+<a class="flex items-center gap-4 px-margin-edge py-3 hover:bg-surface-container-high transition-colors text-on-surface" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-sidebar-nav">HOME</span>
+</a>
+<a class="flex items-center gap-4 px-margin-edge py-3 bg-primary-container text-primary font-bold" href="#">
+<span class="material-symbols-outlined">info</span>
+<span class="font-sidebar-nav">ABOUT US</span>
+</a>
+<a class="flex items-center gap-4 px-margin-edge py-3 hover:bg-surface-container-high transition-colors text-on-surface" href="#">
+<span class="material-symbols-outlined">foundation</span>
+<span class="font-sidebar-nav">VERTICALS</span>
+</a>
+<a class="flex items-center gap-4 px-margin-edge py-3 hover:bg-surface-container-high transition-colors text-on-surface" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="font-sidebar-nav">CAREERS</span>
+</a>
+<a class="flex items-center gap-4 px-margin-edge py-3 hover:bg-surface-container-high transition-colors text-on-surface" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span class="font-sidebar-nav">CONTACT</span>
+</a>
+</nav>
+</aside>
+</div>
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 bg-surface border-b border-outline-variant flex justify-between items-center px-6 w-full py-4">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary active:scale-95 transition-transform" id="menu-toggle">menu</button>
+<h1 class="font-headline-lg uppercase font-bold text-primary text-xl">AHA ENGINEERING</h1>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 font-label-technical rounded-lg uppercase active:opacity-80 transition-opacity">REQUEST QUOTE</button>
+</header>
+<main class="pb-24 pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[60vh] flex flex-col justify-end p-grid-margin overflow-hidden transition-all duration-700 opacity-100">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-primary/20 z-10"></div>
+<div class="absolute inset-0 structural-grid z-0"></div>
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAcQewPHF2rPfxmIyqZdO8Id4lU5_FNrKQzp7Wb1lhI-A7in0WnA8vNpGbSi9lI_uHigrt5_qC37wk2V-VflZV0bSZDaqQvXV5YTVikh60CGGu02M5a9fnYoeIQI31BnOoPCcLmb_TCwKWd3jO20mLfVS1cpnjGhY8ZlL67TkRoI1fav6v8_9-887PVgFerlvI8s0YVAHqF9-tL1h5At1vxglVXKWFGzPfWuWu9qPPzR_7NWLxr0jLD0c_GdOC70KnKD_NDZVAx9D2N')"></div>
+</div>
+<div class="relative z-20 bg-surface p-6 border-l-4 border-primary max-w-sm">
+<span class="font-label-technical text-label-technical text-primary block mb-2 uppercase">Company Profile</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary uppercase mb-4">Engineering the Future</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Defining excellence in infrastructure through precision, scale, and unwavering commitment to industrial progress.</p>
+</div>
+</section>
+<!-- Vision/Mission -->
+<section class="px-grid-margin py-16 bg-surface-container-low border-b border-outline-variant transition-all duration-700 opacity-100">
+<div class="flex flex-col gap-8">
+<div>
+<span class="font-label-technical text-label-technical text-primary uppercase">Our Vision</span>
+<h2 class="font-headline-lg text-primary mt-2">Touching Lives Through Engineering</h2>
+<div class="w-16 h-1 bg-primary mt-4"></div>
+</div>
+<p class="font-body-md text-on-surface">
+                    To be a global powerhouse in heavy infrastructure, transforming landscapes and empowering communities through engineering solutions that stand the test of time and nature.
+                </p>
+<div class="grid grid-cols-1 gap-4">
+<div class="p-6 bg-surface border border-outline-variant">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl">history</span>
+<h3 class="font-headline-lg text-primary text-xl mb-2">Our History</h3>
+<p class="font-body-sm text-on-surface-variant">Founded on the principles of technical mastery, AHA Engineering has evolved from a local consultant to a global infrastructure titan, delivering over 500+ landmark projects across four decades.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Leadership Section -->
+<section class="px-grid-margin py-16 transition-all duration-700 opacity-100">
+<div class="flex flex-col gap-8">
+<div>
+<span class="font-label-technical text-label-technical text-primary uppercase">Executive Board</span>
+<h2 class="font-headline-lg text-primary mt-2">Strategic Leadership</h2>
+</div>
+<!-- Lead Profile Card -->
+<div class="group border border-outline-variant overflow-hidden bg-white">
+<div class="aspect-square w-full bg-surface-container overflow-hidden">
+<img alt="Executive Leader" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLvASMvOWH79E5tLcyh9W5sj-tZug1TjMeCK7f-A6hig7uVBRG3ftLBtxWAcE0r_5fFqmX_o_f8CcibGnQ9vzrhJrA_08SwlyKUppvprJLR5oz52RwK4_Gee4CVVHOZkxcJgqJNUOUa5hNX2kYbR5WWDZ1djA7cKuG4FJyRjokf0S9morZGSY1WcoUrn3KAZuuz___kWJ9jWjWQ0kytMg40KIKBKMR7q97RWv6CMjDqZ0lG_iZm9jrGhCUIm"/>
+</div>
+<div class="p-6 border-t border-outline-variant relative">
+<div class="absolute -top-4 right-6 bg-primary text-on-primary px-4 py-1 font-label-technical text-label-technical">MANAGING DIRECTOR</div>
+<h3 class="font-headline-lg text-primary text-xl">Mr. P. Krishnaiah</h3>
+<p class="font-body-sm text-on-surface-variant mt-2">Visionary leader with 35+ years in civil infrastructure. Pioneering some of the world's most complex hydraulic and transportation systems.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="border border-outline-variant p-4 bg-surface-container-low">
+<p class="font-label-technical text-label-technical text-primary mb-1">PROJECT DIRECTOR</p>
+<p class="font-headline-lg text-on-surface text-sm">Industrial Systems</p>
+</div>
+<div class="border border-outline-variant p-4 bg-surface-container-low">
+<p class="font-label-technical text-label-technical text-primary mb-1">TECHNICAL HEAD</p>
+<p class="font-headline-lg text-on-surface text-sm">Civil &amp; Structural</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Footprint Stats -->
+<section class="bg-primary text-on-primary py-16 px-grid-margin relative overflow-hidden transition-all duration-700 opacity-100">
+<div class="absolute inset-0 structural-grid opacity-10"></div>
+<div class="relative z-10 flex flex-col gap-12">
+<div>
+<span class="font-label-technical text-label-technical text-on-primary-container uppercase">Global Footprint</span>
+<h2 class="font-headline-lg text-white mt-2">Engineering Across Borders</h2>
+</div>
+<div class="grid grid-cols-2 gap-y-12 gap-x-8">
+<div>
+<p class="font-display-hero text-4xl text-on-primary-container">12+</p>
+<p class="font-label-technical text-label-technical uppercase mt-2 opacity-80">Countries</p>
+</div>
+<div>
+<p class="font-display-hero text-4xl text-on-primary-container">25k</p>
+<p class="font-label-technical text-label-technical uppercase mt-2 opacity-80">Employees</p>
+</div>
+<div>
+<p class="font-display-hero text-4xl text-on-primary-container">500+</p>
+<p class="font-label-technical text-label-technical uppercase mt-2 opacity-80">Mega Projects</p>
+</div>
+<div>
+<p class="font-display-hero text-4xl text-on-primary-container">$4B+</p>
+<p class="font-label-technical text-label-technical uppercase mt-2 opacity-80">Order Book</p>
+</div>
+</div>
+<div class="mt-8 border border-on-primary-container p-6">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-on-primary-container">public</span>
+<p class="font-label-technical text-label-technical uppercase">International Operations</p>
+</div>
+<p class="font-body-sm opacity-90">Executing complex turnkey projects in the Middle East, South-East Asia, and East Africa, adhering to stringent international standards.</p>
+</div>
+</div>
+</section>
+<!-- Commitment Section -->
+<section class="px-grid-margin py-16 transition-all duration-700 opacity-100">
+<div class="flex flex-col gap-6">
+<div>
+<span class="font-label-technical text-label-technical text-primary uppercase">Our Commitment</span>
+<h2 class="font-headline-lg text-primary mt-2">Core Values</h2>
+</div>
+<!-- Bento-ish Grid for Values -->
+<div class="flex flex-col gap-4">
+<!-- Safety Card -->
+<div class="bg-surface border border-outline-variant p-6 relative group transition-colors hover:border-primary">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">health_and_safety</span>
+<h3 class="font-headline-lg text-primary text-xl mb-2">Safety First</h3>
+<p class="font-body-sm text-on-surface-variant">Zero-incident culture. Our safety protocols exceed global OSHA standards on every site.</p>
+</div>
+<!-- Quality Card -->
+<div class="bg-surface border border-outline-variant p-6 transition-colors hover:border-primary">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">verified</span>
+<h3 class="font-headline-lg text-primary text-xl mb-2">Uncompromising Quality</h3>
+<p class="font-body-sm text-on-surface-variant">Six Sigma methodologies applied to structural engineering and project management.</p>
+</div>
+<!-- Accountability Card -->
+<div class="bg-surface border border-outline-variant p-6 transition-colors hover:border-primary">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">handshake</span>
+<h3 class="font-headline-lg text-primary text-xl mb-2">Accountability</h3>
+<p class="font-body-sm text-on-surface-variant">Taking full ownership from blueprint to commissioning, ensuring deadlines are absolute.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-grid-margin pb-16 transition-all duration-700 opacity-100">
+<div class="bg-surface-container-high p-8 border-t-4 border-primary flex flex-col gap-6">
+<h2 class="font-headline-lg text-primary">Partner With Excellence</h2>
+<p class="font-body-md text-on-surface">Connect with our industrial experts to discuss your next large-scale engineering challenge.</p>
+<button class="bg-primary text-on-primary py-4 rounded-lg font-headline-lg uppercase tracking-widest active:scale-95 transition-transform">
+                    GET IN TOUCH
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-highest border-t-4 border-primary flex flex-col gap-component-gap p-grid-margin">
+<div class="flex flex-col gap-6">
+<span class="font-headline-lg font-bold text-primary uppercase">AHA Engineering</span>
+<div class="grid grid-cols-2 gap-4">
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all duration-200" href="#">Infrastructure</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all duration-200" href="#">Energy</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all duration-200" href="#">Hydrocarbons</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all duration-200" href="#">Manufacturing</a>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant/50">
+<p class="font-body-sm text-on-surface-variant">© 2024 AHA Engineering. Hyderabad Office: MEIL, S-2, Technocrat Ind. Estate, Balanagar.</p>
+</div>
+</footer>
+<script>
+    // Sidebar Toggle functionality
+    const drawer = document.getElementById('sidebar-drawer');
+    const toggle = document.getElementById('menu-toggle');
+    const overlay = document.getElementById('sidebar-overlay');
+
+    const toggleDrawer = () => drawer.classList.toggle('hidden');
+
+    toggle.addEventListener('click', toggleDrawer);
+    overlay.addEventListener('click', toggleDrawer);
+
+    // Scroll observer for fading in sections
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100');
+                entry.target.classList.remove('opacity-0', 'translate-y-4');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
+        observer.observe(section);
+    });
+</script>
+</body></html>
