@@ -28,12 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- 2. Parallax Scroll Effect for Hero Backgrounds ---
-  const parallaxBg = document.querySelector('.hero-parallax-bg');
-  if (parallaxBg) {
+  const parallaxBgs = document.querySelectorAll('.hero-parallax-bg');
+  if (parallaxBgs.length > 0) {
     window.addEventListener('scroll', () => {
       const scrolled = window.pageYOffset;
       // Shift background slightly to create depth (0.25 multiplier to avoid extreme moves)
-      parallaxBg.style.transform = `translateY(${scrolled * 0.25}px)`;
+      parallaxBgs.forEach((bg) => {
+        bg.style.transform = `translateY(${scrolled * 0.25}px)`;
+      });
     });
   }
 
@@ -105,5 +107,108 @@ document.addEventListener('DOMContentLoaded', () => {
 
       }, 1500);
     });
+  }
+
+  // --- 5. Hero Carousel Slider Logic ---
+  const carouselContainer = document.getElementById('home-hero');
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+
+  if (slides.length > 0) {
+    let currentSlide = 0;
+    let slideInterval = null;
+    const intervalTime = 5000; // 5 seconds
+
+    const showSlide = (index) => {
+      // Handle index wrapping
+      if (index >= slides.length) {
+        currentSlide = 0;
+      } else if (index < 0) {
+        currentSlide = slides.length - 1;
+      } else {
+        currentSlide = index;
+      }
+
+      // Toggle active classes on slides
+      slides.forEach((slide, idx) => {
+        if (idx === currentSlide) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+
+      // Toggle active classes on indicator dots
+      dots.forEach((dot, idx) => {
+        if (idx === currentSlide) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    };
+
+    const nextSlide = () => {
+      showSlide(currentSlide + 1);
+    };
+
+    const prevSlide = () => {
+      showSlide(currentSlide - 1);
+    };
+
+    // Auto-play controls
+    const startAutoplay = () => {
+      if (!slideInterval) {
+        slideInterval = setInterval(nextSlide, intervalTime);
+      }
+    };
+
+    const stopAutoplay = () => {
+      if (slideInterval) {
+        clearInterval(slideInterval);
+        slideInterval = null;
+      }
+    };
+
+    // Button Event Listeners
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        // Reset autoplay interval on user interaction
+        stopAutoplay();
+        startAutoplay();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        // Reset autoplay interval on user interaction
+        stopAutoplay();
+        startAutoplay();
+      });
+    }
+
+    // Dot Indicators Event Listeners
+    dots.forEach((dot) => {
+      dot.addEventListener('click', (e) => {
+        const slideIndex = parseInt(e.target.getAttribute('data-slide'), 10);
+        showSlide(slideIndex);
+        // Reset autoplay interval on user interaction
+        stopAutoplay();
+        startAutoplay();
+      });
+    });
+
+    // Pause on hover
+    if (carouselContainer) {
+      carouselContainer.addEventListener('mouseenter', stopAutoplay);
+      carouselContainer.addEventListener('mouseleave', startAutoplay);
+    }
+
+    // Initialize Autoplay
+    startAutoplay();
   }
 });

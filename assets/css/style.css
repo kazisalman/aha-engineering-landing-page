@@ -342,9 +342,30 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   width: 100%;
   overflow: hidden;
+}
+
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 3;
 }
 
 .hero-parallax-bg {
@@ -368,9 +389,95 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-content {
   position: relative;
-  z-index: 3;
+  z-index: 4;
   padding: var(--spacing-margin-edge);
-  margin-bottom: 64px;
+  margin-bottom: 80px; /* Space for indicators */
+}
+
+/* Carousel Navigation Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, transform 0.1s;
+  border-radius: var(--rounded-default);
+}
+
+.carousel-arrow:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.carousel-arrow:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.carousel-arrow-prev {
+  left: var(--spacing-margin-edge);
+}
+
+.carousel-arrow-next {
+  right: var(--spacing-margin-edge);
+}
+
+/* Carousel Dot Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 12px;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: width 0.3s, background-color 0.3s, border-color 0.3s;
+  border-radius: var(--rounded-sm);
+}
+
+.carousel-dot:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-dot.active {
+  width: 28px;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+  }
+  .carousel-arrow-prev {
+    left: 16px;
+  }
+  .carousel-arrow-next {
+    right: 16px;
+  }
+  .hero-content {
+    margin-bottom: 72px;
+  }
 }
 
 .industrial-clip {

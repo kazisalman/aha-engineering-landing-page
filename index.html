@@ -27,7 +27,6 @@
       <button class="material-symbols-outlined" id="menu-toggle" aria-label="Open Navigation Menu" style="background: none; border: none; color: var(--color-primary); cursor: pointer; padding: 4px;">menu</button>
       <a href="index.html" style="text-decoration: none;"><h1 class="font-headline-lg-mobile uppercase font-bold text-primary tracking-tighter" style="color: var(--color-primary); margin: 0; font-size: 20px;">AHA ENGINEERING</h1></a>
     </div>
-    <a href="contact.html" class="btn-primary brutalist-border" id="btn-request-quote">REQUEST QUOTE</a>
   </header>
 
   <!-- Navigation Drawer Sidebar -->
@@ -68,20 +67,80 @@
     
     <!-- Hero Section -->
     <section class="hero-section" id="home-hero" style="height: 85vh;">
-      <div class="hero-parallax-bg" style="background-image: url('assets/images/hero-home.png');"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <div class="industrial-clip">
-          Global Infrastructure Leader
+      <div class="hero-carousel">
+        
+        <!-- Slide 1 -->
+        <div class="hero-slide active" data-index="0">
+          <div class="hero-parallax-bg" style="background-image: url('assets/images/hero-home.png');"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="industrial-clip">
+              Global Infrastructure Leader
+            </div>
+            <h2 class="font-headline-xl text-white uppercase" style="color: white; margin-bottom: 24px; max-width: 384px;">
+              Engineering the Future of Global Infrastructure
+            </h2>
+            <div style="display: flex; gap: 16px;">
+              <a href="#competencies" class="btn-primary brutalist-border" id="hero-cta-explore">
+                Explore Our Solutions <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+          </div>
         </div>
-        <h2 class="font-headline-xl text-white uppercase" style="color: white; margin-bottom: 24px; max-width: 384px;">
-          Engineering the Future of Global Infrastructure
-        </h2>
-        <div style="display: flex; gap: 16px;">
-          <a href="#competencies" class="btn-primary brutalist-border" id="hero-cta-explore">
-            Explore Our Solutions <span class="material-symbols-outlined">arrow_forward</span>
-          </a>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide" data-index="1">
+          <div class="hero-parallax-bg" style="background-image: url('assets/images/hero-about.png');"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="industrial-clip">
+              Pioneering Energy & Utilities
+            </div>
+            <h2 class="font-headline-xl text-white uppercase" style="color: white; margin-bottom: 24px; max-width: 384px;">
+              Delivering Sustainable Power and Water Grid Systems
+            </h2>
+            <div style="display: flex; gap: 16px;">
+              <a href="about.html" class="btn-primary brutalist-border" id="hero-cta-about">
+                About Our History <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+          </div>
         </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide" data-index="2">
+          <div class="hero-parallax-bg" style="background-image: url('assets/images/hero-contact.png');"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="industrial-clip">
+              Turnkey Hydrocarbon Engineering
+            </div>
+            <h2 class="font-headline-xl text-white uppercase" style="color: white; margin-bottom: 24px; max-width: 384px;">
+              High-Pressure Systems and Extreme Scale Piping
+            </h2>
+            <div style="display: flex; gap: 16px;">
+              <a href="contact.html" class="btn-primary brutalist-border" id="hero-cta-contact">
+                Get in Touch <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button class="carousel-arrow carousel-arrow-prev" id="carousel-prev" aria-label="Previous Slide">
+        <span class="material-symbols-outlined">chevron_left</span>
+      </button>
+      <button class="carousel-arrow carousel-arrow-next" id="carousel-next" aria-label="Next Slide">
+        <span class="material-symbols-outlined">chevron_right</span>
+      </button>
+
+      <!-- Indicator Dots -->
+      <div class="carousel-indicators">
+        <button class="carousel-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+        <button class="carousel-dot" data-slide="1" aria-label="Go to slide 2"></button>
+        <button class="carousel-dot" data-slide="2" aria-label="Go to slide 3"></button>
       </div>
     </section>
 
