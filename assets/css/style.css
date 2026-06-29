@@ -394,19 +394,27 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 80px; /* Space for indicators */
 }
 
+/* Carousel Controls Container */
+.carousel-controls {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
 /* Carousel Navigation Arrows */
 .carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -421,31 +429,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-arrow:active {
-  transform: translateY(-50%) scale(0.9);
-}
-
-.carousel-arrow-prev {
-  left: var(--spacing-margin-edge);
-}
-
-.carousel-arrow-next {
-  right: var(--spacing-margin-edge);
+  transform: scale(0.9);
 }
 
 /* Carousel Dot Indicators */
 .carousel-indicators {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
   display: flex;
   gap: 12px;
+  align-items: center;
 }
 
 .carousel-dot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background: transparent;
   border: 2px solid white;
   cursor: pointer;
@@ -458,25 +454,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-dot.active {
-  width: 28px;
+  width: 24px;
   background-color: var(--color-primary);
   border-color: var(--color-primary);
 }
 
 /* Responsive adjustments */
 @media (max-width: 767px) {
+  .carousel-controls {
+    bottom: 24px;
+    gap: 16px;
+  }
   .carousel-arrow {
-    width: 40px;
-    height: 40px;
-  }
-  .carousel-arrow-prev {
-    left: 16px;
-  }
-  .carousel-arrow-next {
-    right: 16px;
+    width: 36px;
+    height: 36px;
   }
   .hero-content {
-    margin-bottom: 72px;
+    margin-bottom: 84px; /* Ensure content is shifted up on mobile to avoid indicators */
   }
 }
 
