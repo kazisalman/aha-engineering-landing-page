@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Businesses | AHA Engineering</title>
+  <meta name="description" content="Explore AHA Engineering's business sectors, including Construction, Energy, Hi-tech Manufacturing, Services, and Allied Businesses."/>
+  
+  <!-- Open Graph / Share Tags -->
+  <meta property="og:title" content="Our Businesses | AHA Engineering"/>
+  <meta property="og:description" content="Discover our sector solutions in civil infrastructure, energy utility grids, heavy manufacturing, and engineering services."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="assets/images/hero-home.png"/>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  
+  <!-- JS Script -->
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Top App Bar Header -->
+  <header class="header-fixed" id="site-header">
+    <div class="header-logo-area">
+      <button class="material-symbols-outlined" id="menu-toggle" aria-label="Open Navigation Menu" style="background: none; border: none; color: var(--color-primary); cursor: pointer; padding: 4px;">menu</button>
+      <a href="index.html" style="text-decoration: none;">
+        <h1 class="header-logo-title">
+          <picture>
+            <source srcset="assets/images/logo.webp" type="image/webp">
+            <img src="assets/images/logo.png" class="header-logo" alt="AHA Engineering" width="209" height="46">
+          </picture>
+        </h1>
+      </a>
+    </div>
+    <nav class="desktop-nav">
+      <a class="nav-item" href="index.html">Home</a>
+      <a class="nav-item" href="about.html">About us</a>
+      <a class="nav-item" href="careers.html">Career</a>
+      <a class="nav-item" href="contact.html">Contact</a>
+      <div class="nav-dropdown active">
+        <button class="nav-dropdown-btn">
+          Businesses <span class="material-symbols-outlined dropdown-icon">expand_more</span>
+        </button>
+        <div class="nav-dropdown-content">
+          <a class="dropdown-item" href="businesses.html#manufacturing">Products</a>
+          <a class="dropdown-item" href="index.html#projects">Projects</a>
+          <a class="dropdown-item" href="businesses.html#services">Services</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Navigation Drawer Sidebar -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <aside class="sidebar-drawer" id="sidebar-drawer">
+    <div class="sidebar-header">
+      <span class="font-headline-lg-mobile text-primary font-bold uppercase tracking-tight" style="color: var(--color-primary);">Navigation</span>
+      <button class="material-symbols-outlined" id="sidebar-close" aria-label="Close Navigation Menu" style="background: none; border: none; color: var(--color-primary); cursor: pointer; padding: 4px;">close</button>
+    </div>
+    <nav class="sidebar-nav">
+      <a class="sidebar-link" href="index.html">
+        <span class="material-symbols-outlined">home</span> Home
+      </a>
+      <a class="sidebar-link" href="about.html">
+        <span class="material-symbols-outlined">info</span> About us
+      </a>
+      <div class="sidebar-section active">
+        <div class="sidebar-section-header">
+          <span class="material-symbols-outlined">layers</span> Businesses
+        </div>
+        <div class="sidebar-sub-nav">
+          <a class="sidebar-sub-link" href="businesses.html#manufacturing">Products</a>
+          <a class="sidebar-sub-link" href="index.html#projects">Projects</a>
+          <a class="sidebar-sub-link" href="businesses.html#services">Services</a>
+        </div>
+      </div>
+      <a class="sidebar-link" href="careers.html" id="link-nav-careers">
+        <span class="material-symbols-outlined">work</span> Career
+      </a>
+      <a class="sidebar-link" href="contact.html">
+        <span class="material-symbols-outlined">mail</span> Contact
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <p class="font-label-technical text-outline uppercase" style="color: var(--color-outline); margin: 0;">Global Support</p>
+      <p class="font-body-sm text-on-surface-variant" style="color: var(--color-on-surface-variant); margin: 8px 0 0 0; font-weight: 500;">+91 40 2307 6501</p>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <main class="main-content">
+    
+    <!-- Hero Header Section -->
+    <section class="hero-section" id="businesses-hero" style="height: 200px;">
+      <div class="hero-parallax-bg" style="background-image: url('assets/images/hero-home.png'); bottom: -100px; filter: brightness(0.4) grayscale(20%);"></div>
+      <div class="hero-overlay" style="background: linear-gradient(to top, var(--color-background) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);"></div>
+      <div class="hero-content" style="margin-bottom: 24px;">
+        <span class="font-label-technical uppercase" style="color: var(--color-primary-fixed-dim); display: block; margin-bottom: 8px;">Divisions & Verticals</span>
+        <h2 class="font-headline-xl text-white uppercase" style="color: white; margin: 0;">OUR BUSINESSES</h2>
+      </div>
+    </section>
+
+    <!-- Interactive Tab Menu & Content -->
+    <section class="py-16" style="padding-top: 32px;">
+      <div class="container-grid">
+        
+        <!-- Sticky Tabs Menu Container -->
+        <div class="businesses-tabs-container brutalist-border">
+          <div class="businesses-tabs">
+            <button class="tab-btn active" data-tab="construction">CONSTRUCTION</button>
+            <button class="tab-btn" data-tab="energy">ENERGY</button>
+            <button class="tab-btn" data-tab="manufacturing">HI-TECH MANUFACTURING</button>
+            <button class="tab-btn" data-tab="services">SERVICES</button>
+            <button class="tab-btn" data-tab="allied">ALLIED BUSINESSES</button>
+          </div>
+        </div>
+
+        <!-- Tab Content Panes -->
+        <div class="businesses-panes" style="margin-top: 48px;">
+          
+          <!-- Pane 1: Construction -->
+          <div class="tab-pane active" id="pane-construction">
+            <div class="pane-intro">
+              <h3 class="font-headline-lg text-primary uppercase">Construction Infrastructure</h3>
+              <p class="font-body-md text-on-surface-variant">
+                Pioneering monumental civil engineering, structural masterpieces, and mega utility projects that reshape global transportation and supply landscapes.
+              </p>
+            </div>
+            
+            <div class="business-cards-grid">
+              <!-- Card 1 -->
+              <div class="business-card brutalist-border">
+                <div class="business-card-header">
+                  <span class="material-symbols-outlined">construction</span>
+                  <h4>Heavy Civil Infrastructure</h4>
+                </div>
+                <p class="font-body-sm text-on-surface-variant">
+                  Engineering massive metro systems, bridges, structural steel channels, and highway channels built to withstand decades of intensive operation.
+                </p>
+                <a href="contact.html?segment=infrastructure" class="btn-secondary brutalist-border card-cta">
+                  INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                </a>
+              </div>
+              <!-- Card 2 -->
+              <div class="business-card brutalist-border">
+                <div class="business-card-header">
+                  <span class="material-symbols-outlined">water_damage</span>
+                  <h4>Water & Effluent Treatment</h4>
+                </div>
+                <p class="font-body-sm text-on-surface-variant">
+                  Pioneering major regional irrigation pumping systems, municipal water networks, treatment plants, and spillway dam setups.
+                </p>
+                <a href="contact.html?segment=infrastructure" class="btn-secondary brutalist-border card-cta">
+                  INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                </a>
+              </div>
+              <!-- Card 3 -->
+              <div class="business-card brutalist-border">
+                <div class="business-card-header">
+                  <span class="material-symbols-outlined">bolt</span>
+                  <h4>Power Grid Distribution</h4>
+                </div>
+                <p class="font-body-sm text-on-surface-variant">
+                  Designing and establishing secure electrical distribution networks, substations, high-voltage lines, and smart grid automation.
+                </p>
+                <a href="contact.html?segment=infrastructure" class="btn-secondary brutalist-border card-cta">
+                  INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 2: Energy -->
+          <div class="tab-pane" id="pane-energy">
+            <div class="pane-intro">
+              <h3 class="font-headline-lg text-primary uppercase">Energy & Utilities</h3>
+              <p class="font-body-md text-on-surface-variant">
+                Turnkey engineering solutions for critical power systems, green grid utility integrations, and heavy-duty hydrocarbon installations.
+              </p>
+            </div>
+            
+            <div class="business-cards-grid">
+              <!-- Card 1 -->
+              <div class="business-card brutalist-border">
+                <div class="business-card-header">
+                  <span class="material-symbols-outlined">factory</span>
+                  <h4>Thermal Power Systems</h4>
+                </div>
+                <p class="font-body-sm text-on-surface-variant">
+                  Full engineering coordination and construction of thermal units, heavy boilers, turbine sets, and utility pipeline structures.
+                </p>
+                <a href="contact.html?segment=energy" class="btn-secondary brutalist-border card-cta">
+                  INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                </a>
+              </div>
+              <!-- Card 2 -->
+              <div class="business-card brutalist-border">
+                <div class="business-card-header">
+                  <span class="material-symbols-outlined">eco</span>
+                  <h4>Green Energy Infrastructure</h4>
+                </div>
+                <p class="font-body-sm text-on-surface-variant">
+                  Constructing large-scale utility solar parks, clean power distribution arrays, and storage grid configurations.
+                </p>
+                <a href="contact.html?segment=energy" class="btn-secondary brutalist-border card-cta">
+                  INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                </a>
+              </div>
+              <!-- Card 3 -->
+              <div class="business-card brutalist-border">
+                <div class="business-card-header">
+                  <span class="material-symbols-outlined">oil_barrel</span>
+                  <h4>Hydrocarbons Processing</h4>
+                </div>
+                <p class="font-body-sm text-on-surface-variant">
+                  Delivering reliable gas processing centers, cross-country pipelines, onshore containment networks, and utility units.
+                </p>
+                <a href="contact.html?segment=energy" class="btn-secondary brutalist-border card-cta">
+                  INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 3: Hi-tech Manufacturing -->
+          <div class="tab-pane" id="pane-manufacturing">
+            <div class="pane-intro">
+              <h3 class="font-headline-lg text-primary uppercase">Hi-tech Manufacturing</h3>
+              <p class="font-body-md text-on-surface-variant">
+                Precision engineering, advanced component fabrication, extreme-load pipelines, and high-pressure flow control networks.
+              </p>
+            </div>
+            
+            <div class="business-cards-grid">
+              <!-- Card 1 -->
+              <div class="business-card brutalist-border">
+                <div class="business-card-header">
+                  <span class="material-symbols-outlined">precision_manufacturing</span>
+                  <h4>Heavy Engineering</h4>
+                </div>
+                <p class="font-body-sm text-on-surface-variant">
+                  Fabricating custom high-pressure reactors, massive heat exchangers, storage vessels, and advanced thermal systems.
+                </p>
+                <a href="contact.html?segment=manufacturing" class="btn-secondary brutalist-border card-cta">
+                  INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                </a>
+              </div>
+              <!-- Card 2 -->
+              <div class="business-card brutalist-border">
+                <div class="business-card-header">
+                  <span class="material-symbols-outlined">settings_input_component</span>
+                  <h4>Industrial Valves</h4>
+                </div>
+                <p class="font-body-sm text-on-surface-variant">
+                  Manufacturing extreme-durability gate, globe, and control valves engineered for high-pressure industrial flow controls.
+                </p>
+                <a href="contact.html?segment=manufacturing" class="btn-secondary brutalist-border card-cta">
+                  INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                </a>
+              </div>
+              <!-- Card 3 -->
+              <div class="business-card brutalist-border">
+                <div class="business-card-header">
+                  <span class="material-symbols-outlined">polyline</span>
+                  <h4>Specialized Piping Networks</h4>
+                </div>
+                <p class="font-body-sm text-on-surface-variant">
+                  Fabricating complex custom alloy piping manifolds, pipeline fittings, and stress-tolerant networks.
+                </p>
+                <a href="contact.html?segment=manufacturing" class="btn-secondary brutalist-border card-cta">
+                  INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 4: Services -->
+          <div class="tab-pane" id="pane-services">
+            <div class="pane-intro">
+              <h3 class="font-headline-lg text-primary uppercase">Engineering & Technical Services</h3>
+              <p class="font-body-md text-on-surface-variant">
+                Professional layout consulting, turnkey execution tracking, quality controls, and digital telemetry for global project hubs.
+              </p>
+            </div>
+            
+            <div class="business-cards-grid">
+              <!-- Card 1 -->
+              <div class="business-card brutalist-border">
+                <div class="business-card-header">
+                  <span class="material-symbols-outlined">architecture</span>
+                  <h4>Engineering & Design</h4>
+                </div>
+                <p class="font-body-sm text-on-surface-variant">
+                  Delivering complex FEED layout plans, 3D stress modeling, piping architecture diagnostics, and structural simulations.
+                </p>
+                <a href="contact.html?segment=infrastructure" class="btn-secondary brutalist-border card-cta">
+                  INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                </a>
+              </div>
+              <!-- Card 2 -->
+              <div class="business-card brutalist-border">
+                <div class="business-card-header">
+                  <span class="material-symbols-outlined">assignment</span>
+                  <h4>Project Execution & PMO</h4>
+                </div>
+                <p class="font-body-sm text-on-surface-variant">
+                  Overseeing site development operations, logistics timelines, progress milestones, and strict structural quality metrics.
+                </p>
+                <a href="contact.html?segment=infrastructure" class="btn-secondary brutalist-border card-cta">
+                  INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                </a>
+              </div>
+              <!-- Card 3 -->
+              <div class="business-card brutalist-border">
+                <div class="business-card-header">
+                  <span class="material-symbols-outlined">settings_remote</span>
+                  <h4>Digital Automation</h4>
+                </div>
+                <p class="font-body-sm text-on-surface-variant">
+                  Integrating telemetry control arrays, SCADA systems, remote flow trackers, and automated emergency shutoff triggers.
+                </p>
+                <a href="contact.html?segment=infrastructure" class="btn-secondary brutalist-border card-cta">
+                  INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 5: Allied Businesses -->
+          <div class="tab-pane" id="pane-allied">
+            <div class="pane-intro">
+              <h3 class="font-headline-lg text-primary uppercase">Allied Businesses</h3>
+              <p class="font-body-md text-on-surface-variant">
+                Supporting logistics operations and custom mechanical fabrications to back major infrastructure builds and real estate hubs.
+              </p>
+            </div>
+            
+            <div class="business-cards-grid">
+              <!-- Card 1 -->
+              <div class="business-card brutalist-border">
+                <div class="business-card-header">
+                  <span class="material-symbols-outlined">local_shipping</span>
+                  <h4>Heavy Cargo Logistics</h4>
+                </div>
+                <p class="font-body-sm text-on-surface-variant">
+                  Specialized logistics transport for oversized components, heavy pressure reactors, and extreme-length piping sections.
+                </p>
+                <a href="contact.html" class="btn-secondary brutalist-border card-cta">
+                  INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                </a>
+              </div>
+              <!-- Card 2 -->
+              <div class="business-card brutalist-border">
+                <div class="business-card-header">
+                  <span class="material-symbols-outlined">engineering</span>
+                  <h4>Machinery Assemblies</h4>
+                </div>
+                <p class="font-body-sm text-on-surface-variant">
+                  Fabricating standard industrial hydraulic presses, component tooling modules, and custom heavy mechanical systems.
+                </p>
+                <a href="contact.html" class="btn-secondary brutalist-border card-cta">
+                  INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                </a>
+              </div>
+              <!-- Card 3 -->
+              <div class="business-card brutalist-border">
+                <div class="business-card-header">
+                  <span class="material-symbols-outlined">domain</span>
+                  <h4>Real Estate Complexes</h4>
+                </div>
+                <p class="font-body-sm text-on-surface-variant">
+                  Developing sustainable green industrial complexes, smart corporate parks, and high-efficiency regional logistics hubs.
+                </p>
+                <a href="contact.html" class="btn-secondary brutalist-border card-cta">
+                  INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer-row">
+    <div class="footer__section">
+      <div class="container-grid">
+        <div class="footer__wrapper">
+          <!-- Column 1: About AHA Group -->
+          <div class="col__block">
+            <a class="footer__title" href="about.html">About AHA Group</a>
+            <div class="footer__list">
+              <div class="link__item"><a href="about.html">Overview</a></div>
+              <div class="link__item"><a href="about.html">Leadership</a></div>
+              <div class="link__item"><a href="careers.html">Careers</a></div>
+              <div class="link__item"><a href="about.html">Corporate Policies</a></div>
+            </div>
+          </div>
+          
+          <!-- Column 2: Divisions -->
+          <div class="col__block">
+            <a class="footer__title" href="businesses.html">Divisions</a>
+            <div class="footer__list">
+              <div class="link__item"><a href="businesses.html#construction">Infrastructure</a></div>
+              <div class="link__item"><a href="businesses.html#energy">Energy</a></div>
+              <div class="link__item"><a href="businesses.html#manufacturing">Hydrocarbons</a></div>
+              <div class="link__item"><a href="businesses.html#manufacturing">Manufacturing</a></div>
+              <div class="link__item"><a href="businesses.html">Services</a></div>
+            </div>
+          </div>
+          
+          <!-- Column 3: Careers -->
+          <div class="col__block">
+            <a class="footer__title" href="careers.html">Careers</a>
+            <div class="footer__list">
+              <div class="link__item"><a href="careers.html#overview">Overview</a></div>
+              <div class="link__item"><a href="careers.html#campus">Campus Engage</a></div>
+              <div class="link__item"><a href="careers.html#learning">Learning &amp; Development</a></div>
+              <div class="link__item"><a href="careers.html#diversity">Diversity, Equity &amp; Inclusion</a></div>
+              <div class="link__item"><a href="careers.html#renew">Renew</a></div>
+            </div>
+          </div>
+          
+          <!-- Column 4: Contact Us -->
+          <div class="col__block">
+            <div class="footer__title">Contact Us</div>
+            <div class="footer__list">
+              <div class="contact-text">
+                <p style="margin: 0;">
+                  <a href="contact.html" title="Contact Us"><strong>View all Contacts</strong></a>
+                  <br><br>
+                  AHA Engineering Private Limited<br>
+                  CIN – U45200TG2020PTC140000<br>
+                  Hyderabad Office: MEIL, S-2, Technocrat Ind. Estate, Balanagar, Hyderabad, Telangana - 500037
+                  <br><br>
+                  Tel: <a href="tel:+914012345678">+91 40 1234 5678</a><br>
+                  Mobile: <a href="tel:+919876543210">+91 98765 43210</a><br>
+                  Send us a mail:<br>
+                  <a href="mailto:info@ahaengineering.com">info@ahaengineering.com</a> (General)<br>
+                  <a href="mailto:sales@ahaengineering.com">sales@ahaengineering.com</a> (Sales)
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Column 5: Sustainability -->
+          <div class="col__block">
+            <a class="footer__title" href="about.html">Sustainability</a>
+            <div class="footer__list">
+              <div class="link__item"><a href="about.html">Overview</a></div>
+              <div class="link__item"><a href="about.html">Our Initiatives</a></div>
+              <div class="link__item"><a href="about.html">ESG Commitment</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bottom_footer">
+      <div class="container-grid">
+        <div class="bottom_inner_wrap">
+          <div class="social_media_wrap">
+            <p>Follow Us</p>
+            <ul class="social_media">
+              <li>
+                <a aria-label="LinkedIn Link" target="_blank" rel="noreferrer noopener" href="https://www.linkedin.com">
+                  <svg id="Group_35347" data-name="Group 35347" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.518 17.485">
+                    <defs>
+                      <clipPath id="clip-path-li"><rect id="Rectangle_16386_li" data-name="Rectangle 16386" width="17.518" height="17.485" fill="#fff"></rect></clipPath>
+                    </defs>
+                    <g id="Group_35346_li" data-name="Group 35346" clip-path="url(#clip-path-li)">
+                      <path id="Path_36712_li" data-name="Path 36712" d="M159.358,141.6h3.477v1.6a1.6,1.6,0,0,0,.109-.128,3.689,3.689,0,0,1,2.888-1.739,5.523,5.523,0,0,1,2.155.192,3.3,3.3,0,0,1,2.305,2.322,9.87,9.87,0,0,1,.371,3.037c0,2.061,0,4.122,0,6.183,0,.156-.036.213-.2.212q-1.623-.011-3.246,0c-.172,0-.2-.063-.2-.215q.006-2.926,0-5.853a4.927,4.927,0,0,0-.2-1.555,1.506,1.506,0,0,0-1.483-1.127,3.413,3.413,0,0,0-.885.071,1.761,1.761,0,0,0-1.342,1.547,8.312,8.312,0,0,0-.119,1.449c-.013,1.815-.008,3.63,0,5.444,0,.184-.045.241-.234.239-1.063-.009-2.125,0-3.188,0h-.207Z" transform="translate(-153.149 -135.8)" fill="#fff"></path>
+                      <path id="Path_36713_li" data-name="Path 36713" d="M10.953,160.313c-.078,0-.141.009-.2.009-1.069,0-2.138,0-3.208,0-.172,0-.217-.045-.217-.217q.007-5.629,0-11.258c0-.168.039-.221.215-.219,1.069.008,2.138,0,3.208,0h.207Z" transform="translate(-7.039 -142.841)" fill="#fff"></path>
+                      <path id="Path_36714_li" data-name="Path 36714" d="M4.211,2.109A2.106,2.106,0,1,1,2.116,0,2.1,2.1,0,0,1,4.211,2.109" transform="translate(0.001 0)" fill="#fff"></path>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a aria-label="Youtube Link" target="_blank" rel="noreferrer noopener" href="https://www.youtube.com">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.219 16.253">
+                    <path id="Path_15698_yt" data-name="Path 15698" d="M1661.921,474.511a2.909,2.909,0,0,0-2.053-2.053c-1.811-.485-9.071-.485-9.071-.485s-7.261,0-9.072.485a2.91,2.91,0,0,0-2.053,2.053,32.481,32.481,0,0,0,0,11.177,2.911,2.911,0,0,0,2.053,2.053c1.811.485,9.072.485,9.072.485s7.26,0,9.071-.485a2.91,2.91,0,0,0,2.053-2.053,32.433,32.433,0,0,0,0-11.177Zm-13.446,9.071v-6.966l6.032,3.483Z" transform="translate(-1639.188 -471.973)" fill="#fff"></path>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" aria-label="Twitter Link" rel="noreferrer noopener" href="https://x.com">
+                  <svg id="Group_35345" data-name="Group 35345" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.928 16.206">
+                    <defs>
+                      <clipPath id="clip-path-tw"><rect id="Rectangle_16385_tw" data-name="Rectangle 16385" width="17.928" height="16.205" fill="#fff"></rect></clipPath>
+                    </defs>
+                    <g id="Group_35344_tw" data-name="Group 35344" clip-path="url(#clip-path-tw)">
+                      <path id="Path_36711_tw" data-name="Path 36711" d="M0,0H.236c1.745,0,3.491,0,5.236,0A.389.389,0,0,1,5.82.183q1.812,2.4,3.631,4.8c.042.056.087.11.15.188.263-.3.519-.588.773-.879Q12.2,2.2,14.032.114a.327.327,0,0,1,.215-.1C15.1,0,15.963,0,16.885,0L10.877,6.869l7.05,9.31c-.1.008-.165.016-.23.016q-2.554,0-5.108.01a.335.335,0,0,1-.3-.151q-2.07-2.713-4.149-5.42c-.017-.022-.036-.043-.07-.084-.27.306-.536.606-.8.908q-2,2.289-4,4.581a.388.388,0,0,1-.324.154c-.809,0-1.618,0-2.426,0-.033,0-.066-.007-.141-.016L6.781,8.862,0,0M3.241,1.575c.055.08.082.122.112.162L6.817,6.259q3.121,4.076,6.244,8.152c.044.058.114.134.173.135.465.011.93.006,1.433.006-.062-.088-.1-.145-.14-.2L8.8,6.794Q6.886,4.26,4.966,1.728c-.047-.062-.121-.145-.185-.146-.5-.012-1-.007-1.541-.007" transform="translate(0 0)" fill="#fff"></path>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="copyright_wrap">
+            <ul class="other_links">
+              <li><a aria-label="COPYRIGHT Terms Link" href="about.html">Copyright &amp; Terms</a></li>
+              <li><a aria-label="Privacy Policy Link" href="about.html">Privacy Policy</a></li>
+            </ul>
+            <div class="copyright_text">
+              <p>© 2026 AHA Engineering Private Limited. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -211,4 +211,178 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Autoplay
     startAutoplay();
   }
+
+  // --- 6. Megastructures Horizontal Slider Scroll Progress ---
+  const sectorWrapper = document.querySelector('.megastructures-cards-wrapper');
+  const sectorProgressTrack = document.querySelector('.slider-progress-bar');
+  const sectorProgressHandle = document.querySelector('.slider-progress-indicator');
+
+  if (sectorWrapper && sectorProgressTrack && sectorProgressHandle) {
+    const updateSectorProgress = () => {
+      const maxScroll = sectorWrapper.scrollWidth - sectorWrapper.clientWidth;
+      if (maxScroll <= 0) {
+        sectorProgressHandle.style.transform = 'translateX(0px)';
+        return;
+      }
+      const scrollRatio = sectorWrapper.scrollLeft / maxScroll;
+      const trackWidth = sectorProgressTrack.clientWidth;
+      const handleWidth = sectorProgressHandle.clientWidth;
+      const maxTranslation = trackWidth - handleWidth;
+      const translation = scrollRatio * maxTranslation;
+      sectorProgressHandle.style.transform = `translateX(${translation}px)`;
+    };
+
+    sectorWrapper.addEventListener('scroll', () => {
+      window.requestAnimationFrame(updateSectorProgress);
+    });
+
+    window.addEventListener('resize', updateSectorProgress);
+    updateSectorProgress();
+  }
+
+  // --- 7. Businesses Page Tab Navigation Routing ---
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabPanes = document.querySelectorAll('.tab-pane');
+
+  if (tabButtons.length > 0 && tabPanes.length > 0) {
+    const validTabs = ['construction', 'energy', 'manufacturing', 'services', 'allied'];
+    
+    const switchTab = (tabId) => {
+      tabButtons.forEach(btn => {
+        if (btn.getAttribute('data-tab') === tabId) {
+          btn.classList.add('active');
+          btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      
+      tabPanes.forEach(pane => {
+        if (pane.id === `pane-${tabId}`) {
+          pane.classList.add('active');
+        } else {
+          pane.classList.remove('active');
+        }
+      });
+    };
+
+    const handleHash = () => {
+      const hash = window.location.hash.slice(1).toLowerCase();
+      if (validTabs.includes(hash)) {
+        switchTab(hash);
+      } else {
+        switchTab('construction');
+      }
+    };
+
+    // Click event listeners on tab buttons
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tabId = btn.getAttribute('data-tab');
+        window.location.hash = tabId;
+      });
+    });
+
+    // Hash change event listener
+    window.addEventListener('hashchange', handleHash);
+
+    // Initial load check
+    handleHash();
+  }
+
+  // --- 8. Careers Application Form Simulation & File Input ---
+  const careerForm = document.getElementById('career-application-form');
+  const fileInput = document.getElementById('input-resume');
+  const fileWrapper = document.querySelector('.file-upload-wrapper');
+  const fileNameDisplay = document.querySelector('.file-upload-name');
+  const fileHintDisplay = document.querySelector('.file-upload-hint');
+  const fileIcon = document.querySelector('.file-upload-icon');
+
+  if (fileInput && fileWrapper && fileNameDisplay) {
+    // Update filename display on selection
+    fileInput.addEventListener('change', (e) => {
+      if (fileInput.files && fileInput.files.length > 0) {
+        const file = fileInput.files[0];
+        fileNameDisplay.textContent = `Selected File: ${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)`;
+        fileNameDisplay.style.display = 'block';
+        if (fileHintDisplay) fileHintDisplay.style.display = 'none';
+        if (fileIcon) {
+          fileIcon.textContent = 'description';
+          fileIcon.style.color = 'var(--color-primary-container)';
+        }
+      } else {
+        fileNameDisplay.style.display = 'none';
+        if (fileHintDisplay) fileHintDisplay.style.display = 'block';
+        if (fileIcon) {
+          fileIcon.textContent = 'upload_file';
+          fileIcon.style.color = '';
+        }
+      }
+    });
+
+    // Drag over styling
+    ['dragenter', 'dragover'].forEach(eventName => {
+      fileInput.addEventListener(eventName, () => {
+        fileWrapper.classList.add('dragover');
+      });
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      fileInput.addEventListener(eventName, () => {
+        fileWrapper.classList.remove('dragover');
+      });
+    });
+  }
+
+  if (careerForm) {
+    careerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const submitBtn = careerForm.querySelector('.btn-submit');
+      if (!submitBtn) return;
+
+      const originalBtnContent = submitBtn.innerHTML;
+      
+      // Stage 1: UPLOADING & PROCESSING
+      submitBtn.innerHTML = 'SUBMITTING APPLICATION... <span class="material-symbols-outlined" style="animation: spin 1s linear infinite;">sync</span>';
+      submitBtn.style.opacity = '0.6';
+      submitBtn.disabled = true;
+
+      // Add a CSS keyframe animation for spinning icon dynamically if not in CSS
+      if (!document.getElementById('spin-animation-styles')) {
+        const style = document.createElement('style');
+        style.id = 'spin-animation-styles';
+        style.innerHTML = `@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }`;
+        document.head.appendChild(style);
+      }
+
+      // Simulate network request (2000ms delay for upload + processing)
+      setTimeout(() => {
+        // Stage 2: SUCCESS
+        submitBtn.innerHTML = 'APPLICATION SUBMITTED <span class="material-symbols-outlined">check_circle</span>';
+        submitBtn.style.backgroundColor = '#16a34a'; // green-600 color
+        submitBtn.style.borderColor = '#15803d'; // green-700
+        submitBtn.style.opacity = '1';
+
+        // Stage 3: Restore state (3500ms delay)
+        setTimeout(() => {
+          submitBtn.innerHTML = originalBtnContent;
+          submitBtn.style.backgroundColor = ''; // Restore CSS default
+          submitBtn.style.borderColor = '';
+          submitBtn.style.opacity = '';
+          submitBtn.disabled = false;
+          
+          // Reset form and file display
+          careerForm.reset();
+          if (fileNameDisplay) fileNameDisplay.style.display = 'none';
+          if (fileHintDisplay) fileHintDisplay.style.display = 'block';
+          if (fileIcon) {
+            fileIcon.textContent = 'upload_file';
+            fileIcon.style.color = '';
+          }
+        }, 3500);
+
+      }, 2000);
+    });
+  }
 });
