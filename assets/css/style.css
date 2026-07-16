@@ -2012,3 +2012,174 @@ select.form-input {
   margin: 0;
 }
 
+/* --- RIL Motto Section Styles --- */
+.motto-section {
+  background-color: var(--color-surface);
+  text-align: center;
+  padding: 64px 0;
+}
+
+.motto-title {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--color-on-surface);
+  margin: 0 0 16px 0;
+}
+
+.motto-headline {
+  font-family: var(--font-headline);
+  color: var(--color-primary-container);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0 auto 16px auto;
+  max-width: 800px;
+}
+
+.motto-subtitle {
+  font-family: var(--font-technical);
+  color: var(--color-outline);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 24px 0;
+  letter-spacing: 0.05em;
+}
+
+.motto-body {
+  font-family: var(--font-body);
+  color: var(--color-on-surface-variant);
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .motto-section {
+    padding: 80px 0;
+  }
+  
+  .motto-title {
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+  
+  .motto-headline {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .motto-subtitle {
+    font-size: 13px;
+  }
+}
+
+/* --- L&T Overview Sections Styles --- */
+.lt-split-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.lt-split-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.lt-split-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.lt-split-image-container img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.lt-founders-medal-wrap {
+  position: relative;
+  background-color: #e8eeff;
+  border-radius: var(--rounded-lg);
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.lt-founders-medal-wrap .blueprint-grid {
+  opacity: 0.15;
+}
+
+.lt-founders-medal-wrap img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: var(--rounded-full);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
+.lt-pill-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border: 1.5px solid var(--color-primary);
+  border-radius: var(--rounded-full);
+  color: var(--color-primary);
+  font-family: var(--font-technical);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: transparent;
+  transition: background-color 0.2s, color 0.2s, transform 0.1s;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.lt-pill-button:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.lt-pill-button:active {
+  transform: scale(0.96);
+}
+
+@media (min-width: 992px) {
+  .lt-split-section {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+  
+  .lt-split-section.reverse {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+  
+  .lt-split-section.reverse .lt-split-image-container {
+    grid-column: 1;
+  }
+  
+  .lt-split-section.reverse .lt-split-content {
+    grid-column: 2;
+  }
+}
+
