@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products & Solutions | AHA Engineering</title>
+  <meta name="description" content="Explore AHA Engineering's comprehensive range of industrial products including high-pressure valves, steel piping, fire protection systems, ELV networks, and MEP equipment."/>
+  
+  <!-- Open Graph / Share Tags -->
+  <meta property="og:title" content="Products & Solutions | AHA Engineering"/>
+  <meta property="og:description" content="High-quality industrial valves, carbon steel pipes, fire safety setups, ELV security, and MEP accessories engineered for global infrastructure projects."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="assets/images/hero-home.png"/>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  
+  <!-- JS Script -->
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Top App Bar Header -->
+  <header class="header-fixed" id="site-header">
+    <div class="header-logo-area">
+      <button class="material-symbols-outlined" id="menu-toggle" aria-label="Open Navigation Menu" style="background: none; border: none; color: var(--color-primary); cursor: pointer; padding: 4px;">menu</button>
+      <a href="index.html" style="text-decoration: none;">
+        <h1 class="header-logo-title">
+          <picture>
+            <source srcset="assets/images/logo.webp" type="image/webp">
+            <img src="assets/images/logo.png" class="header-logo" alt="AHA Engineering" width="209" height="46">
+          </picture>
+        </h1>
+      </a>
+    </div>
+    <nav class="desktop-nav">
+      <a class="nav-item" href="index.html">Home</a>
+      <a class="nav-item" href="about.html">About us</a>
+      <a class="nav-item" href="careers.html">Career</a>
+      <a class="nav-item" href="contact.html">Contact</a>
+      <div class="nav-dropdown active">
+        <button class="nav-dropdown-btn">
+          Businesses <span class="material-symbols-outlined dropdown-icon">expand_more</span>
+        </button>
+        <div class="nav-dropdown-content">
+          <a class="dropdown-item active" href="products.html">Products</a>
+          <a class="dropdown-item" href="index.html#projects">Projects</a>
+          <a class="dropdown-item" href="businesses.html#services">Services</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Navigation Drawer Sidebar -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <aside class="sidebar-drawer" id="sidebar-drawer">
+    <div class="sidebar-header">
+      <span class="font-headline-lg-mobile text-primary font-bold uppercase tracking-tight" style="color: var(--color-primary);">Navigation</span>
+      <button class="material-symbols-outlined" id="sidebar-close" aria-label="Close Navigation Menu" style="background: none; border: none; color: var(--color-primary); cursor: pointer; padding: 4px;">close</button>
+    </div>
+    <nav class="sidebar-nav">
+      <a class="sidebar-link" href="index.html">
+        <span class="material-symbols-outlined">home</span> Home
+      </a>
+      <a class="sidebar-link" href="about.html">
+        <span class="material-symbols-outlined">info</span> About us
+      </a>
+      <div class="sidebar-section active">
+        <div class="sidebar-section-header">
+          <span class="material-symbols-outlined">layers</span> Businesses
+        </div>
+        <div class="sidebar-sub-nav">
+          <a class="sidebar-sub-link active" href="products.html">Products</a>
+          <a class="sidebar-sub-link" href="index.html#projects">Projects</a>
+          <a class="sidebar-sub-link" href="businesses.html#services">Services</a>
+        </div>
+      </div>
+      <a class="sidebar-link" href="careers.html" id="link-nav-careers">
+        <span class="material-symbols-outlined">work</span> Career
+      </a>
+      <a class="sidebar-link" href="contact.html">
+        <span class="material-symbols-outlined">mail</span> Contact
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <p class="font-label-technical text-outline uppercase" style="color: var(--color-outline); margin: 0;">Global Support</p>
+      <p class="font-body-sm text-on-surface-variant" style="color: var(--color-on-surface-variant); margin: 8px 0 0 0; font-weight: 500;">+91 40 2307 6501</p>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <main class="main-content">
+    
+    <!-- Hero Header Section -->
+    <section class="hero-section" id="products-hero" style="height: 200px;">
+      <div class="hero-parallax-bg" style="background-image: url('assets/images/hero-home.png'); bottom: -100px; filter: brightness(0.4) grayscale(20%);"></div>
+      <div class="hero-overlay" style="background: linear-gradient(to top, var(--color-background) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);"></div>
+      <div class="hero-content" style="margin-bottom: 24px;">
+        <span class="font-label-technical uppercase" style="color: var(--color-primary-fixed-dim); display: block; margin-bottom: 8px;">Division Portfolio</span>
+        <h2 class="font-headline-xl text-white uppercase" style="color: white; margin: 0;">PRODUCTS & SOLUTIONS</h2>
+      </div>
+    </section>
+
+    <!-- Mobile Category Slider -->
+    <div class="mobile-category-slider-container">
+      <div class="mobile-category-slider">
+        <button class="mobile-category-btn active" data-cat="cat-valves">Valves</button>
+        <button class="mobile-category-btn" data-cat="cat-pipes">Piping</button>
+        <button class="mobile-category-btn" data-cat="cat-fire">Fire Safety</button>
+        <button class="mobile-category-btn" data-cat="cat-elv">ELV Systems</button>
+        <button class="mobile-category-btn" data-cat="cat-mep">MEP Products</button>
+      </div>
+    </div>
+
+    <!-- Interactive Grid Layout -->
+    <section class="py-16" style="padding-top: 32px; padding-bottom: 64px;">
+      <div class="container-grid">
+        <div class="products-layout">
+          
+          <!-- Sticky Left Sidebar (Desktop Only) -->
+          <aside class="products-sidebar brutalist-border">
+            <h3 class="products-sidebar-title">Categories</h3>
+            <nav class="products-sidebar-menu">
+              <a href="#cat-valves" class="products-sidebar-item active">
+                <span class="cat-num">01</span> Industrial Valves
+              </a>
+              <a href="#cat-pipes" class="products-sidebar-item">
+                <span class="cat-num">02</span> Pipes & Piping
+              </a>
+              <a href="#cat-fire" class="products-sidebar-item">
+                <span class="cat-num">03</span> Fire Protection
+              </a>
+              <a href="#cat-elv" class="products-sidebar-item">
+                <span class="cat-num">04</span> ELV Systems
+              </a>
+              <a href="#cat-mep" class="products-sidebar-item">
+                <span class="cat-num">05</span> MEP Products
+              </a>
+            </nav>
+          </aside>
+
+          <!-- Scrollable Products Content -->
+          <div class="products-content">
+            
+            <!-- Section 1: Industrial Valves -->
+            <section class="products-section active" id="cat-valves">
+              <div class="products-section-header">
+                <span class="products-section-num">DIVISION 01 / 05</span>
+                <h3 class="products-section-title">Industrial Valves</h3>
+                <p class="products-section-desc">
+                  High-performance flow control valve systems engineered for volatile gas, fluid transmission, and high-pressure chemical/petrochemical containment systems.
+                </p>
+              </div>
+
+              <div class="products-grid">
+                
+                <!-- Product Card 1: Gate Valve -->
+                <div class="product-card-imageless brutalist-border">
+                  <div class="blueprint-grid"></div>
+                  <div class="product-card-imageless-header">
+                    <div class="product-card-icon-wrap">
+                      <span class="material-symbols-outlined">settings_input_component</span>
+                    </div>
+                    <span class="product-card-badge">PRECISE CONTROL</span>
+                  </div>
+                  <div class="product-card-content">
+                    <h4 class="product-card-title">Gate Valve</h4>
+                    <p class="product-card-subtypes">Wedge Gate &bull; Parallel Slide &bull; Knife Gate &bull; Slab Gate</p>
+                    <p class="product-card-desc">
+                      Heavy-duty valves designed for isolation of fluids and gases in main transmission pipelines. Engineered with a straight-through flow design to minimize pressure drop.
+                    </p>
+                  </div>
+                  <div class="product-specs-table">
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Sizes Available:</span>
+                      <span class="product-spec-value">2" to 60" (DN50 - DN1500)</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Pressure Ratings:</span>
+                      <span class="product-spec-value">Class 150 to Class 2500 (PN16 - PN420)</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Body Materials:</span>
+                      <span class="product-spec-value">Carbon Steel (WCB, LCB), Stainless Steel (CF8, CF8M), Duplex</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Design Standards:</span>
+                      <span class="product-spec-value">API 600, API 6D, ASME B16.34, BS 1414</span>
+                    </div>
+                  </div>
+                  <a href="contact.html?segment=manufacturing&product=Gate%20Valve" class="btn-secondary brutalist-border product-card-cta-btn">
+                    INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                  </a>
+                </div>
+
+                <!-- Product Card 2: Globe Valve -->
+                <div class="product-card-imageless brutalist-border">
+                  <div class="blueprint-grid"></div>
+                  <div class="product-card-imageless-header">
+                    <div class="product-card-icon-wrap">
+                      <span class="material-symbols-outlined">settings_input_component</span>
+                    </div>
+                    <span class="product-card-badge">FLOW THROTTLING</span>
+                  </div>
+                  <div class="product-card-content">
+                    <h4 class="product-card-title">Globe Valve</h4>
+                    <p class="product-card-subtypes">Straight &bull; Y-Pattern &bull; Angle Pattern &bull; Bellows Sealed</p>
+                    <p class="product-card-desc">
+                      Precision-engineered throttling valves designed for regulating flow and frequent operation in high-temperature boiler systems and process steam pipelines.
+                    </p>
+                  </div>
+                  <div class="product-specs-table">
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Sizes Available:</span>
+                      <span class="product-spec-value">1/2" to 24" (DN15 - DN600)</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Pressure Ratings:</span>
+                      <span class="product-spec-value">Class 150 to Class 2500 (PN16 - PN420)</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Body Materials:</span>
+                      <span class="product-spec-value">Forged Carbon Steel (A105), Stainless Steel (F316), Cast Steel (WCB)</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Design Standards:</span>
+                      <span class="product-spec-value">BS 1873, API 623, ASME B16.34</span>
+                    </div>
+                  </div>
+                  <a href="contact.html?segment=manufacturing&product=Globe%20Valve" class="btn-secondary brutalist-border product-card-cta-btn">
+                    INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                  </a>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- Section 2: Pipes & Piping Components -->
+            <section class="products-section" id="cat-pipes">
+              <div class="products-section-header">
+                <span class="products-section-num">DIVISION 02 / 05</span>
+                <h3 class="products-section-title">Pipes & Piping Components</h3>
+                <p class="products-section-desc">
+                  Heavy-gauge structural and industrial fluid pipes, couplings, joints, and fittings manufactured to handle extreme loads and anti-corrosive environments.
+                </p>
+              </div>
+
+              <div class="products-grid">
+                
+                <!-- Product Card 3: MS Pipe -->
+                <div class="product-card-imageless brutalist-border">
+                  <div class="blueprint-grid"></div>
+                  <div class="product-card-imageless-header">
+                    <div class="product-card-icon-wrap">
+                      <span class="material-symbols-outlined">polyline</span>
+                    </div>
+                    <span class="product-card-badge">STRUCTURAL UTILITY</span>
+                  </div>
+                  <div class="product-card-content">
+                    <h4 class="product-card-title">Mild Steel (MS) Pipe</h4>
+                    <p class="product-card-subtypes">ERW Pipes &bull; Seamless &bull; Black MS &bull; Galvanized (GI)</p>
+                    <p class="product-card-desc">
+                      Durable and weldable carbon steel tubing optimized for structural support framing, water lines, low-pressure gas mains, and general industrial plumbing.
+                    </p>
+                  </div>
+                  <div class="product-specs-table">
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Sizes Available:</span>
+                      <span class="product-spec-value">1/2" to 48" Outer Diameter (Custom cuts available)</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Wall Thickness:</span>
+                      <span class="product-spec-value">SCH 10 to SCH XXS (Light, Medium, Heavy classes)</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Grade / Compliance:</span>
+                      <span class="product-spec-value">IS 1239, IS 3589 Grade Fe 330 / Fe 410</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Surface Finish:</span>
+                      <span class="product-spec-value">Black Lacquer, Hot-Dip Galvanized, Anti-rust primer</span>
+                    </div>
+                  </div>
+                  <a href="contact.html?segment=infrastructure&product=Mild%20Steel%20Pipe" class="btn-secondary brutalist-border product-card-cta-btn">
+                    INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                  </a>
+                </div>
+
+                <!-- Product Card 4: CS Pipe -->
+                <div class="product-card-imageless brutalist-border">
+                  <div class="blueprint-grid"></div>
+                  <div class="product-card-imageless-header">
+                    <div class="product-card-icon-wrap">
+                      <span class="material-symbols-outlined">polyline</span>
+                    </div>
+                    <span class="product-card-badge">HIGH PRESSURE</span>
+                  </div>
+                  <div class="product-card-content">
+                    <h4 class="product-card-title">Carbon Steel (CS) Pipe</h4>
+                    <p class="product-card-subtypes">High-Temp Seamless &bull; Low-Temp Seamless &bull; LSAW/ERW Welded</p>
+                    <p class="product-card-desc">
+                      Extreme-gauge seamless pipe sections engineered for high-temperature refineries, cryogenic chemical loops, and petrochemical cross-country distribution lines.
+                    </p>
+                  </div>
+                  <div class="product-specs-table">
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Sizes Available:</span>
+                      <span class="product-spec-value">1/2" to 60" Nominal Pipe Size (NPS)</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Schedules:</span>
+                      <span class="product-spec-value">SCH 40, SCH 80, SCH 160, SCH XS, SCH XXS</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Standards / Grades:</span>
+                      <span class="product-spec-value">ASTM A106 Grade B, ASTM A333 Grade 6, API 5L Gr. B/X52</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Certification:</span>
+                      <span class="product-spec-value">EN 10204 3.1 Mill Test Certificate (MTC)</span>
+                    </div>
+                  </div>
+                  <a href="contact.html?segment=infrastructure&product=Carbon%20Steel%20Pipe" class="btn-secondary brutalist-border product-card-cta-btn">
+                    INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                  </a>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- Section 3: Fire Protection Systems -->
+            <section class="products-section" id="cat-fire">
+              <div class="products-section-header">
+                <span class="products-section-num">DIVISION 03 / 05</span>
+                <h3 class="products-section-title">Fire Protection Systems</h3>
+                <p class="products-section-desc">
+                  Active structural safety barriers, municipal hydrant grids, automated localized extinguishing setups, and industrial emergency control systems.
+                </p>
+              </div>
+
+              <div class="products-grid">
+                
+                <!-- Product Card 5: Fire Hydrant System -->
+                <div class="product-card-imageless brutalist-border">
+                  <div class="blueprint-grid"></div>
+                  <div class="product-card-imageless-header">
+                    <div class="product-card-icon-wrap">
+                      <span class="material-symbols-outlined">local_fire_department</span>
+                    </div>
+                    <span class="product-card-badge">MUNICIPAL PROTECTION</span>
+                  </div>
+                  <div class="product-card-content">
+                    <h4 class="product-card-title">Fire Hydrant System</h4>
+                    <p class="product-card-subtypes">Wet Pillar Hydrants &bull; Dry Pillar Hydrants &bull; Landing Valves</p>
+                    <p class="product-card-desc">
+                      Heavy cast-iron pillar structures linked to high-capacity pumps to deliver continuous water supplies for fire brigades during plant emergencies.
+                    </p>
+                  </div>
+                  <div class="product-specs-table">
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Pillar Style:</span>
+                      <span class="product-spec-value">Standpost Type (Single / Double oblique outlets)</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Landing Valve MOC:</span>
+                      <span class="product-spec-value">Gunmetal (Grade LTB2) / Stainless Steel (SS304/SS316)</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Working Pressure:</span>
+                      <span class="product-spec-value">Operating: 10 Bar | Hydraulic Test: 20 Bar</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Design Standards:</span>
+                      <span class="product-spec-value">IS 3844, BS 5041 Part 1, FM Approved</span>
+                    </div>
+                  </div>
+                  <a href="contact.html?segment=infrastructure&product=Fire%20Hydrant%20System" class="btn-secondary brutalist-border product-card-cta-btn">
+                    INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                  </a>
+                </div>
+
+                <!-- Product Card 6: Automatic Sprinkler System -->
+                <div class="product-card-imageless brutalist-border">
+                  <div class="blueprint-grid"></div>
+                  <div class="product-card-imageless-header">
+                    <div class="product-card-icon-wrap">
+                      <span class="material-symbols-outlined">local_fire_department</span>
+                    </div>
+                    <span class="product-card-badge">AUTOMATED MITIGATION</span>
+                  </div>
+                  <div class="product-card-content">
+                    <h4 class="product-card-title">Automatic Sprinkler System</h4>
+                    <p class="product-card-subtypes">Pendent Sprinklers &bull; Upright &bull; Sidewall &bull; Concealed</p>
+                    <p class="product-card-desc">
+                      Rapid response thermal-release water nozzles designed to detect, contain, and extinguish fire starts locally within warehouses and corporate complexes.
+                    </p>
+                  </div>
+                  <div class="product-specs-table">
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Thread Connections:</span>
+                      <span class="product-spec-value">1/2" NPT, 3/4" NPT (DN15, DN20)</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Release Temps:</span>
+                      <span class="product-spec-value">57°C (Orange), 68°C (Red), 79°C (Yellow), 93°C (Green)</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Flow Constant:</span>
+                      <span class="product-spec-value">K-Factor 5.6 (80 metric), K-Factor 8.0 (115 metric)</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Core Trigger:</span>
+                      <span class="product-spec-value">3mm or 5mm Hermetically Sealed Glass Bulb</span>
+                    </div>
+                  </div>
+                  <a href="contact.html?segment=infrastructure&product=Automatic%20Sprinkler%20System" class="btn-secondary brutalist-border product-card-cta-btn">
+                    INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                  </a>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- Section 4: ELV Systems -->
+            <section class="products-section" id="cat-elv">
+              <div class="products-section-header">
+                <span class="products-section-num">DIVISION 04 / 05</span>
+                <h3 class="products-section-title">ELV Systems</h3>
+                <p class="products-section-desc">
+                  Extra-Low Voltage infrastructure, CCTV surveillance networks, enterprise structural cabling grids, and smart building access controls.
+                </p>
+              </div>
+
+              <div class="products-grid">
+                
+                <!-- Product Card 7: CCTV Cameras -->
+                <div class="product-card-imageless brutalist-border">
+                  <div class="blueprint-grid"></div>
+                  <div class="product-card-imageless-header">
+                    <div class="product-card-icon-wrap">
+                      <span class="material-symbols-outlined">videocam</span>
+                    </div>
+                    <span class="product-card-badge">ENTERPRISE SECURITY</span>
+                  </div>
+                  <div class="product-card-content">
+                    <h4 class="product-card-title">CCTV Cameras</h4>
+                    <p class="product-card-subtypes">IP Dome &bull; IP Bullet &bull; PTZ Speed Domes &bull; Thermal Imaging</p>
+                    <p class="product-card-desc">
+                      Professional-grade security cameras built for continuous outdoor/indoor monitoring. Features low-light color capture and smart visual analytics.
+                    </p>
+                  </div>
+                  <div class="product-specs-table">
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Image Resolution:</span>
+                      <span class="product-spec-value">4MP (2K), 8MP (4K UHD) at 30 frames per second</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Optical Lens:</span>
+                      <span class="product-spec-value">2.8-12mm Motorized Varifocal, Remote Auto Focus</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Night Vision Range:</span>
+                      <span class="product-spec-value">Smart IR range up to 50 meters (Exir adaptive)</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Protection Ratings:</span>
+                      <span class="product-spec-value">IP67 Weatherproof, IK10 Vandal-Resistant metal body</span>
+                    </div>
+                  </div>
+                  <a href="contact.html?segment=manufacturing&product=CCTV%20Cameras" class="btn-secondary brutalist-border product-card-cta-btn">
+                    INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                  </a>
+                </div>
+
+                <!-- Product Card 8: Access Control Systems -->
+                <div class="product-card-imageless brutalist-border">
+                  <div class="blueprint-grid"></div>
+                  <div class="product-card-imageless-header">
+                    <div class="product-card-icon-wrap">
+                      <span class="material-symbols-outlined">security</span>
+                    </div>
+                    <span class="product-card-badge">PERIMETER CONTROL</span>
+                  </div>
+                  <div class="product-card-content">
+                    <h4 class="product-card-title">Access Control Systems</h4>
+                    <p class="product-card-subtypes">Biometric Terminals &bull; RFID Card Readers &bull; Face ID Terminals</p>
+                    <p class="product-card-desc">
+                      High-security authentication stations that track and restrict perimeter entries. Combines facial biometric mapping and smartcard sensors.
+                    </p>
+                  </div>
+                  <div class="product-specs-table">
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Log Capacity:</span>
+                      <span class="product-spec-value">10,000 Faces, 50,000 RFID Cards, 200,000 event logs</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">RF Compatibility:</span>
+                      <span class="product-spec-value">Mifare (13.56MHz), EM card (125kHz), HID Desfire</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Interfaces:</span>
+                      <span class="product-spec-value">TCP/IP, Wi-Fi, RS-485, Wiegand output, Lock Relay</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Response Time:</span>
+                      <span class="product-spec-value">Verification in < 0.2s with 99.9% accuracy</span>
+                    </div>
+                  </div>
+                  <a href="contact.html?segment=manufacturing&product=Access%20Control%20Systems" class="btn-secondary brutalist-border product-card-cta-btn">
+                    INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                  </a>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- Section 5: MEP Products -->
+            <section class="products-section" id="cat-mep">
+              <div class="products-section-header">
+                <span class="products-section-num">DIVISION 05 / 05</span>
+                <h3 class="products-section-title">MEP Products</h3>
+                <p class="products-section-desc">
+                  Mechanical, Electrical, and Plumbing accessories, ventilation ducting systems, cable organization racks, and low-tension electric control panels.
+                </p>
+              </div>
+
+              <div class="products-grid">
+                
+                <!-- Product Card 9: HVAC Accessories & Ducting -->
+                <div class="product-card-imageless brutalist-border">
+                  <div class="blueprint-grid"></div>
+                  <div class="product-card-imageless-header">
+                    <div class="product-card-icon-wrap">
+                      <span class="material-symbols-outlined">hvac</span>
+                    </div>
+                    <span class="product-card-badge">AIR DISTRIBUTION</span>
+                  </div>
+                  <div class="product-card-content">
+                    <h4 class="product-card-title">HVAC Accessories & Ducting</h4>
+                    <p class="product-card-subtypes">GI Rectangular Ducts &bull; Spiral Round Ducts &bull; Dampers &bull; Diffusers</p>
+                    <p class="product-card-desc">
+                      High-volume galvanized sheet metal air distribution networks designed for cooling, ventilation, and air balancing in large production plants.
+                    </p>
+                  </div>
+                  <div class="product-specs-table">
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Sheet Material:</span>
+                      <span class="product-spec-value">Galvanized Iron (GI) Lockforming Quality (LFQ) steel</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Design Standards:</span>
+                      <span class="product-spec-value">SMACNA HVAC Duct Construction standards, DW144</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Zinc Galvanizing:</span>
+                      <span class="product-spec-value">Zinc coating of 120 g/m² to 275 g/m² (rust proof)</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Gauges Available:</span>
+                      <span class="product-spec-value">24 Gauge to 18 Gauge (0.63mm to 1.25mm thickness)</span>
+                    </div>
+                  </div>
+                  <a href="contact.html?segment=energy&product=HVAC%20Ducting" class="btn-secondary brutalist-border product-card-cta-btn">
+                    INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                  </a>
+                </div>
+
+                <!-- Product Card 10: Cable Trays -->
+                <div class="product-card-imageless brutalist-border">
+                  <div class="blueprint-grid"></div>
+                  <div class="product-card-imageless-header">
+                    <div class="product-card-icon-wrap">
+                      <span class="material-symbols-outlined">bolt</span>
+                    </div>
+                    <span class="product-card-badge">POWER MANAGEMENT</span>
+                  </div>
+                  <div class="product-card-content">
+                    <h4 class="product-card-title">Cable Trays</h4>
+                    <p class="product-card-subtypes">Perforated Trays &bull; Ladder Type Trays &bull; Wire Mesh Trays</p>
+                    <p class="product-card-desc">
+                      Heavy-duty steel channel trays designed to route and support electric power cords, signal cabling, and control networks throughout commercial complexes.
+                    </p>
+                  </div>
+                  <div class="product-specs-table">
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Material Options:</span>
+                      <span class="product-spec-value">Galvanized Steel, Stainless Steel (SS304, SS316), Aluminium</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Coatings Available:</span>
+                      <span class="product-spec-value">Pre-Galvanized, Hot-Dip Galvanized after fabrication, Epoxy</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Widths & Heights:</span>
+                      <span class="product-spec-value">Width: 50mm-1000mm | Height: 50mm-150mm</span>
+                    </div>
+                    <div class="product-spec-row">
+                      <span class="product-spec-label">Metal Thickness:</span>
+                      <span class="product-spec-value">1.2mm, 1.5mm, 2.0mm, 2.5mm (Heavy load rating)</span>
+                    </div>
+                  </div>
+                  <a href="contact.html?segment=energy&product=Cable%20Trays" class="btn-secondary brutalist-border product-card-cta-btn">
+                    INQUIRE NOW <span class="material-symbols-outlined">send</span>
+                  </a>
+                </div>
+
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer-row">
+    <div class="footer__section">
+      <div class="container-grid">
+        <div class="footer__wrapper">
+          <!-- Column 1: About AHA Group -->
+          <div class="col__block">
+            <a class="footer__title" href="about.html">About AHA Group</a>
+            <div class="footer__list">
+              <div class="link__item"><a href="about.html">Overview</a></div>
+              <div class="link__item"><a href="about.html#values">Our Values</a></div>
+              <div class="link__item"><a href="careers.html">Careers</a></div>
+              <div class="link__item"><a href="about.html">Corporate Policies</a></div>
+            </div>
+          </div>
+          
+          <!-- Column 2: Divisions -->
+          <div class="col__block">
+            <a class="footer__title" href="businesses.html">Divisions</a>
+            <div class="footer__list">
+              <div class="link__item"><a href="businesses.html#construction">Infrastructure</a></div>
+              <div class="link__item"><a href="businesses.html#energy">Energy</a></div>
+              <div class="link__item"><a href="businesses.html#manufacturing">Hydrocarbons</a></div>
+              <div class="link__item"><a href="businesses.html#manufacturing">Manufacturing</a></div>
+              <div class="link__item"><a href="businesses.html">Services</a></div>
+            </div>
+          </div>
+          
+          <!-- Column 3: Careers -->
+          <div class="col__block">
+            <a class="footer__title" href="careers.html">Careers</a>
+            <div class="footer__list">
+              <div class="link__item"><a href="careers.html#overview">Overview</a></div>
+              <div class="link__item"><a href="careers.html#campus">Campus Engage</a></div>
+              <div class="link__item"><a href="careers.html#learning">Learning &amp; Development</a></div>
+              <div class="link__item"><a href="careers.html#diversity">Diversity, Equity &amp; Inclusion</a></div>
+              <div class="link__item"><a href="careers.html#renew">Renew</a></div>
+            </div>
+          </div>
+          
+          <!-- Column 4: Contact Us -->
+          <div class="col__block">
+            <div class="footer__title">Contact Us</div>
+            <div class="footer__list">
+              <div class="contact-text">
+                <p style="margin: 0;">
+                  <a href="contact.html" title="Contact Us"><strong>View all Contacts</strong></a>
+                  <br><br>
+                  AHA Engineering Private Limited<br>
+                  CIN – U45200TG2020PTC140000<br>
+                  Hyderabad Office: MEIL, S-2, Technocrat Ind. Estate, Balanagar, Hyderabad, Telangana - 500037
+                  <br><br>
+                  Tel: <a href="tel:+914012345678">+91 40 1234 5678</a><br>
+                  Mobile: <a href="tel:+919876543210">+91 98765 43210</a><br>
+                  Send us a mail:<br>
+                  <a href="mailto:info@ahaengineering.com">info@ahaengineering.com</a> (General)<br>
+                  <a href="mailto:sales@ahaengineering.com">sales@ahaengineering.com</a> (Sales)
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Column 5: Sustainability -->
+          <div class="col__block">
+            <a class="footer__title" href="about.html">Sustainability</a>
+            <div class="footer__list">
+              <div class="link__item"><a href="about.html">Overview</a></div>
+              <div class="link__item"><a href="about.html">Our Initiatives</a></div>
+              <div class="link__item"><a href="about.html">ESG Commitment</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bottom_footer">
+      <div class="container-grid">
+        <div class="bottom_inner_wrap">
+          <div class="social_media_wrap">
+            <p>Follow Us</p>
+            <ul class="social_media">
+              <li>
+                <a aria-label="LinkedIn Link" target="_blank" rel="noreferrer noopener" href="https://www.linkedin.com">
+                  <svg id="Group_35347" data-name="Group 35347" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.518 17.485">
+                    <defs>
+                      <clipPath id="clip-path-li"><rect id="Rectangle_16386_li" data-name="Rectangle 16386" width="17.518" height="17.485" fill="#fff"></rect></clipPath>
+                    </defs>
+                    <g id="Group_35346_li" data-name="Group 35346" clip-path="url(#clip-path-li)">
+                      <path id="Path_36712_li" data-name="Path 36712" d="M159.358,141.6h3.477v1.6a1.6,1.6,0,0,0,.109-.128,3.689,3.689,0,0,1,2.888-1.739,5.523,5.523,0,0,1,2.155.192,3.3,3.3,0,0,1,2.305,2.322,9.87,9.87,0,0,1,.371,3.037c0,2.061,0,4.122,0,6.183,0,.156-.036.213-.2.212q-1.623-.011-3.246,0c-.172,0-.2-.063-.2-.215q.006-2.926,0-5.853a4.927,4.927,0,0,0-.2-1.555,1.506,0,0,0-1.483-1.127,3.413,3.413,0,0,0-.885.071,1.761,1.761,0,0,0-1.342,1.547,8.312,8.312,0,0,0-.119,1.449c-.013,1.815-.008,3.63,0,5.444,0,.184-.045.241-.234.239-1.063-.009-2.125,0-3.188,0h-.207Z" transform="translate(-153.149 -135.8)" fill="#fff"></path>
+                      <path id="Path_36713_li" data-name="Path 36713" d="M10.953,160.313c-.078,0-.141.009-.2.009-1.069,0-2.138,0-3.208,0-.172,0-.217-.045-.217-.217q.007-5.629,0-11.258c0-.168.039-.221.215-.219,1.069.008,2.138,0,3.208,0h.207Z" transform="translate(-7.039 -142.841)" fill="#fff"></path>
+                      <path id="Path_36714_li" data-name="Path 36714" d="M4.211,2.109A2.106,2.106,0,1,1,2.116,0,2.1,2.1,0,0,1,4.211,2.109" transform="translate(0.001 0)" fill="#fff"></path>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a aria-label="Youtube Link" target="_blank" rel="noreferrer noopener" href="https://www.youtube.com">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.219 16.253">
+                    <path id="Path_15698_yt" data-name="Path 15698" d="M1661.921,474.511a2.909,2.909,0,0,0-2.053-2.053c-1.811-.485-9.071-.485-9.071-.485s-7.261,0-9.072.485a2.91,2.91,0,0,0-2.053,2.053,32.481,32.481,0,0,0,0,11.177,2.911,2.911,0,0,0,2.053,2.053c1.811.485,9.072.485,9.072.485s7.26,0,9.071-.485a2.91,2.91,0,0,0,2.053-2.053,32.433,32.433,0,0,0,0-11.177Zm-13.446,9.071v-6.966l6.032,3.483Z" transform="translate(-1639.188 -471.973)" fill="#fff"></path>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" aria-label="Twitter Link" rel="noreferrer noopener" href="https://x.com">
+                  <svg id="Group_35345" data-name="Group 35345" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.928 16.206">
+                    <defs>
+                      <clipPath id="clip-path-tw"><rect id="Rectangle_16385_tw" data-name="Rectangle 16385" width="17.928" height="16.205" fill="#fff"></rect></clipPath>
+                    </defs>
+                    <g id="Group_35344_tw" data-name="Group 35344" clip-path="url(#clip-path-tw)">
+                      <path id="Path_36711_tw" data-name="Path 36711" d="M0,0H.236c1.745,0,3.491,0,5.236,0A.389.389,0,0,1,5.82.183q1.812,2.4,3.631,4.8c.042.056.087.11.15.188.263-.3.519-.588.773-.879Q12.2,2.2,14.032.114a.327.327,0,0,1,.215-.1C15.1,0,15.963,0,16.885,0L10.877,6.869l7.05,9.31c-.1.008-.165.016-.23.016q-2.554,0-5.108.01a.335.335,0,0,1-.3-.151q-2.07-2.713-4.149-5.42c-.017-.022-.036-.043-.07-.084-.27.306-.536.606-.8.908q-2,2.289-4,4.581a.388.388,0,0,1-.324.154c-.809,0-1.618,0-2.426,0-.033,0-.066-.007-.141-.016L6.781,8.862,0,0M3.241,1.575c.055.08.082.122.112.162L6.817,6.259q3.121,4.076,6.244,8.152c.044.058.114.134.173.135.465.011.93.006,1.433.006-.062-.088-.1-.145-.14-.2L8.8,6.794Q6.886,4.26,4.966,1.728c-.047-.062-.121-.145-.185-.146-.5-.012-1-.007-1.541-.007" transform="translate(0 0)" fill="#fff"></path>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="copyright_wrap">
+            <ul class="other_links">
+              <li><a aria-label="COPYRIGHT Terms Link" href="about.html">Copyright &amp; Terms</a></li>
+              <li><a aria-label="Privacy Policy Link" href="about.html">Privacy Policy</a></li>
+            </ul>
+            <div class="copyright_text">
+              <p>© 2026 AHA Engineering Private Limited. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

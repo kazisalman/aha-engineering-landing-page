@@ -385,4 +385,85 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 2000);
     });
   }
+
+  // --- 9. Products Page Category Tab Switching ---
+  const productsNavItems = document.querySelectorAll('.products-sidebar-item');
+  const mobileCatBtns = document.querySelectorAll('.mobile-category-btn');
+  const productSections = document.querySelectorAll('.products-section');
+
+  if (productSections.length > 0) {
+    const switchCategory = (catId) => {
+      const cleanId = (catId || '').replace('#', '');
+      if (!cleanId) return;
+
+      // 1. Update desktop sidebar items active class
+      productsNavItems.forEach(item => {
+        const href = item.getAttribute('href') || '';
+        if (href.replace('#', '') === cleanId) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+
+      // 2. Update mobile slider buttons active class & smooth scroll button into center view
+      mobileCatBtns.forEach(btn => {
+        const btnCat = btn.getAttribute('data-cat') || '';
+        if (btnCat.replace('#', '') === cleanId) {
+          btn.classList.add('active');
+          const container = btn.parentElement;
+          if (container) {
+            const btnLeft = btn.offsetLeft;
+            const btnWidth = btn.offsetWidth;
+            const containerWidth = container.offsetWidth;
+            container.scrollTo({
+              left: btnLeft - (containerWidth / 2) + (btnWidth / 2),
+              behavior: 'smooth'
+            });
+          }
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // 3. Toggle visible category section pane
+      productSections.forEach(section => {
+        if (section.id === cleanId) {
+          section.classList.add('active');
+        } else {
+          section.classList.remove('active');
+        }
+      });
+
+      // 4. Update URL hash without page jump
+      history.pushState(null, null, `#${cleanId}`);
+    };
+
+    // Click event handler for desktop sidebar links
+    productsNavItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = (item.getAttribute('href') || '').replace('#', '');
+        switchCategory(targetId);
+      });
+    });
+
+    // Click event handler for mobile category buttons
+    mobileCatBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = (btn.getAttribute('data-cat') || '').replace('#', '');
+        switchCategory(targetId);
+      });
+    });
+
+    // Initial load check if hash is present in URL
+    const initialHash = window.location.hash.replace('#', '');
+    if (initialHash && document.getElementById(initialHash)) {
+      switchCategory(initialHash);
+    } else {
+      if (productSections[0]) {
+        switchCategory(productSections[0].id);
+      }
+    }
+  }
 });
