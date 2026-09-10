@@ -30,12 +30,12 @@
   <header class="header-fixed" id="site-header">
     <div class="header-logo-area">
       <button class="material-symbols-outlined" id="menu-toggle" aria-label="Open Navigation Menu"
-        style="background: none; border: none; color: var(--color-primary); cursor: pointer; padding: 4px;">menu</button>
+        style="background: none; border: none; color: #ffffff; cursor: pointer; padding: 4px;">menu</button>
       <a href="index.html" style="text-decoration: none;">
         <h1 class="header-logo-title">
           <picture>
-            <source srcset="assets/images/logo.webp" type="image/webp">
-            <img src="assets/images/logo.png" class="header-logo" alt="AHA Engineering" width="209" height="46">
+            <source srcset="assets/images/logo-white.svg" type="image/svg+xml">
+            <img src="assets/images/logo-white.svg" class="header-logo" alt="AHA Engineering - One Partner. Multiple Engineering Solutions." width="209" height="46">
           </picture>
         </h1>
       </a>
@@ -43,18 +43,21 @@
     <nav class="desktop-nav">
       <a class="nav-item active" href="index.html">Home</a>
       <a class="nav-item" href="about.html">About us</a>
-      <a class="nav-item" href="careers.html">Career</a>
-      <a class="nav-item" href="contact.html">Contact</a>
       <div class="nav-dropdown">
         <button class="nav-dropdown-btn">
           Businesses <span class="material-symbols-outlined dropdown-icon">expand_more</span>
         </button>
         <div class="nav-dropdown-content">
+          <a class="dropdown-item" href="businesses.html">All Businesses</a>
           <a class="dropdown-item" href="products.html">Products</a>
-          <a class="dropdown-item" href="index.html#projects">Projects</a>
           <a class="dropdown-item" href="businesses.html#services">Services</a>
         </div>
       </div>
+      <a class="nav-item" href="careers.html">Career</a>
+      <a class="nav-item" href="about.html#certifications">Certifications</a>
+      <a class="nav-item" href="#blogs">Blogs</a>
+      <a class="nav-item" href="#downloads">Downloads</a>
+      <a class="nav-item" href="contact.html">Contact</a>
     </nav>
   </header>
 
@@ -87,6 +90,15 @@
       <a class="sidebar-link" href="careers.html" id="link-nav-careers">
         <span class="material-symbols-outlined">work</span> Career
       </a>
+      <a class="sidebar-link" href="about.html#certifications">
+        <span class="material-symbols-outlined">verified</span> Certifications
+      </a>
+      <a class="sidebar-link" href="#blogs">
+        <span class="material-symbols-outlined">article</span> Blogs
+      </a>
+      <a class="sidebar-link" href="#downloads">
+        <span class="material-symbols-outlined">download</span> Downloads
+      </a>
       <a class="sidebar-link" href="contact.html">
         <span class="material-symbols-outlined">mail</span> Contact
       </a>
@@ -108,18 +120,18 @@
 
         <!-- Slide 1 -->
         <div class="hero-slide active" data-index="0">
-          <div class="hero-parallax-bg" style="background-image: url('assets/images/hero-home.png');"></div>
+          <div class="hero-parallax-bg" style="background-image: url('assets/images/hero-home-new.jpg');"></div>
           <div class="hero-overlay"></div>
           <div class="hero-content">
             <div class="industrial-clip">
-              Global Infrastructure Leader
+              One Partner. Multiple Engineering Solutions.
             </div>
             <h2 class="font-headline-xl text-white uppercase"
-              style="color: white; margin-bottom: 24px; max-width: 384px;">
-              Engineering the Future of Global Infrastructure
+              style="color: white; margin-bottom: 24px; max-width: 580px; font-size: clamp(32px, 5vw, 48px); line-height: 1.15;">
+              Integrated Engineering Solutions for Industry &amp; Infrastructure
             </h2>
             <div style="display: flex; gap: 16px;">
-              <a href="#competencies" class="btn-primary brutalist-border" id="hero-cta-explore">
+              <a href="businesses.html" class="btn-primary brutalist-border" id="hero-cta-explore">
                 Explore Our Solutions <span class="material-symbols-outlined">arrow_forward</span>
               </a>
             </div>
@@ -196,10 +208,9 @@
             </h3>
             <p class="font-body-md text-on-surface-variant"
               style="color: var(--color-on-surface-variant); margin-bottom: 32px; max-width: 480px;">
-              AHA Engineering leads in nearly every sphere of business it operates in. Serving customers in more than 50
-              countries, across various industries. Explore our offerings by Industry or by Business.
+              AHA Engineering leads in nearly every sphere of business it operates in. Serving customers worldwide, across various industries. Explore our offerings by Industry or by Business.
             </p>
-            <a href="about.html" class="btn-secondary brutalist-border" id="megastructures-know-more"
+            <a href="businesses.html" class="btn-secondary brutalist-border" id="megastructures-know-more"
               style="align-self: flex-start; padding: 12px 24px;">
               Know More <span class="material-symbols-outlined">arrow_forward</span>
             </a>
@@ -298,11 +309,11 @@
             <p>Custom-fabricated piping networks designed for extreme durability in harsh industrial environments.</p>
             <div class="competency-card-line"></div>
           </div>
-          <!-- Heavy Machinery Card -->
-          <div class="competency-card brutalist-border" onclick="location.href='contact.html?segment=machinery'">
-            <span class="material-symbols-outlined">engineering</span>
-            <h4>Custom Machineries</h4>
-            <p>Advanced mechanical units and heavy-duty fabrication for large-scale energy and hydro projects.</p>
+          <!-- Fire & Safety Turnkey Solutions Card -->
+          <div class="competency-card brutalist-border" onclick="location.href='businesses.html#services'">
+            <span class="material-symbols-outlined">local_fire_department</span>
+            <h4>Fire &amp; Safety Turnkey Solutions</h4>
+            <p>Comprehensive fire protection, detection networks, and turnkey safety engineering for high-risk industrial facilities.</p>
             <div class="competency-card-line"></div>
           </div>
         </div>
@@ -311,112 +322,84 @@
 
     <!-- Global Network Reach -->
     <section class="py-16 scroll-animate" id="network" style="background-color: var(--color-primary); color: white;">
-      <div class="container-grid" style="display: grid; grid-template-columns: 1fr; gap: 48px;">
-        <div style="display: flex; flex-direction: column; justify-content: center; gap: 16px;">
-          <span class="font-label-technical uppercase" style="color: var(--color-primary-fixed-dim);">Network
-            Expansion</span>
-          <h3 class="font-headline-xl uppercase" style="color: white; line-height: 1.1;">Unrivaled Global Reach</h3>
-          <p class="font-body-md text-primary-fixed"
-            style="color: var(--color-primary-fixed); margin: 0; max-width: 480px;">
-            Our logistics and transportation network ensures technical precision is delivered to the most remote
-            infrastructure sites worldwide.
+      <div class="container-grid">
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px;">
+          <span class="font-label-technical uppercase" style="color: var(--color-primary-fixed-dim);">Strategic Footprint</span>
+          <h3 class="font-headline-xl uppercase" style="color: white; line-height: 1.1; margin: 0;">Unrivaled Global Reach</h3>
+          <p class="font-body-md text-primary-fixed" style="color: var(--color-primary-fixed); margin: 0; max-width: 600px;">
+            Connecting engineering hubs across Dubai, Abu Dhabi, and Mumbai to deliver precision infrastructure solutions worldwide.
           </p>
         </div>
 
-        <!-- Network Simulation Graphic Box -->
-        <div style="display: flex; justify-content: center; align-items: center;">
-          <div class="network-box brutalist-border" style="width: 100%; max-width: 400px;">
-            <div class="network-dots"></div>
-            <div style="z-index: 10; text-align: center; display: flex; flex-direction: column; align-items: center;">
-              <span class="material-symbols-outlined"
-                style="font-size: 72px; color: var(--color-primary-fixed-dim); margin-bottom: 16px;">public</span>
-              <div class="network-badge badge-hyd">HYDERABAD</div>
-              <div class="network-badge badge-dub">DUBAI</div>
-              <div class="network-badge badge-sing">SINGAPORE</div>
-              <div class="network-badge badge-lon">LONDON</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Landmark Projects -->
-    <section class="py-16 scroll-animate" id="projects">
-      <div class="container-grid">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px;">
-          <div>
-            <span class="font-label-technical uppercase" style="color: var(--color-primary);">Project Portfolio</span>
-            <h3 class="font-headline-xl uppercase">Landmark Work</h3>
-          </div>
-          <span class="material-symbols-outlined"
-            style="font-size: 36px; color: var(--color-outline-variant);">grid_view</span>
-        </div>
-
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px;">
-            <div class="brutalist-border" style="position: relative; height: 256px; overflow: hidden;">
-              <img src="assets/images/project-polavaram.png" alt="Polavaram Spillway Dam Project" class="leader-img"
-                style="width: 100%; height: 100%; object-fit: cover;" width="800" height="600" />
-              <div
-                style="position: absolute; top: 16px; left: 16px; background-color: var(--color-primary); color: white; padding: 4px 12px; font-family: var(--font-technical); font-size: 10px; text-transform: uppercase;">
-                In Progress</div>
-            </div>
+        <div class="global-reach-wrapper">
+          <!-- Hub 1: Dubai -->
+          <div class="global-hub-card">
             <div>
-              <h4 class="font-headline-lg-mobile uppercase" style="color: var(--color-primary); margin-bottom: 8px;">
-                Polavaram Irrigation Complex</h4>
-              <p class="font-body-md text-on-surface-variant"
-                style="color: var(--color-on-surface-variant); margin-bottom: 16px;">
-                A massive spillway engineering marvel designed to regulate seasonal water flow and energy generation.
+              <div class="hub-card-header">
+                <div>
+                  <h4 class="hub-city-name">Dubai</h4>
+                  <div class="hub-country">United Arab Emirates</div>
+                </div>
+                <span class="hub-status-pill">
+                  <span class="hub-status-dot"></span> Strategic Hub
+                </span>
+              </div>
+              <p class="hub-body">
+                International trade nexus orchestrating high-value EPC supply chain coordination, global equipment procurement, and cross-border project governance.
               </p>
-              <a href="#" class="font-label-technical uppercase"
-                style="color: var(--color-primary); text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 8px;">
-                View Case Study <span class="material-symbols-outlined" style="font-size: 14px;">open_in_new</span>
-              </a>
+            </div>
+            <div class="hub-tags">
+              <span class="hub-tag">Regional HQ</span>
+              <span class="hub-tag">Global Logistics</span>
+              <span class="hub-tag">EPC Trading</span>
             </div>
           </div>
 
-          <!-- Project 2 -->
-          <div style="display: flex; flex-direction: column; gap: 16px;">
-            <div class="brutalist-border" style="position: relative; height: 256px; overflow: hidden;">
-              <img src="assets/images/project-kaleshwaram.png" alt="Kaleshwaram Lift Irrigation Pumping Hall"
-                class="leader-img" style="width: 100%; height: 100%; object-fit: cover;" width="800" height="600" />
-              <div
-                style="position: absolute; top: 16px; left: 16px; background-color: var(--color-primary-container); border: 1px solid var(--color-primary); color: white; padding: 4px 12px; font-family: var(--font-technical); font-size: 10px; text-transform: uppercase;">
-                Completed</div>
-            </div>
+          <!-- Hub 2: Abu Dhabi -->
+          <div class="global-hub-card">
             <div>
-              <h4 class="font-headline-lg-mobile uppercase" style="color: var(--color-primary); margin-bottom: 8px;">
-                Kaleshwaram Strategic Hub</h4>
-              <p class="font-body-md text-on-surface-variant"
-                style="color: var(--color-on-surface-variant); margin-bottom: 16px;">
-                World-class lift irrigation infrastructure showcasing AHA's capability in heavy machinery installation.
+              <div class="hub-card-header">
+                <div>
+                  <h4 class="hub-city-name">Abu Dhabi</h4>
+                  <div class="hub-country">United Arab Emirates</div>
+                </div>
+                <span class="hub-status-pill">
+                  <span class="hub-status-dot"></span> Operations
+                </span>
+              </div>
+              <p class="hub-body">
+                Energy, hydrocarbons, and utility infrastructure command center delivering specialized valve networks, high-pressure piping, and industrial project support.
               </p>
-              <a href="#" class="font-label-technical uppercase"
-                style="color: var(--color-primary); text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 8px;">
-                View Case Study <span class="material-symbols-outlined" style="font-size: 14px;">open_in_new</span>
-              </a>
+            </div>
+            <div class="hub-tags">
+              <span class="hub-tag">Energy &amp; Power</span>
+              <span class="hub-tag">Hydrocarbons</span>
+              <span class="hub-tag">Site Support</span>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Call To Action -->
-    <section class="py-16 scroll-animate" id="cta-landing"
-      style="background-color: var(--color-surface-container-high); border-top: 4px solid var(--color-primary);">
-      <div class="container-grid" style="text-align: center;">
-        <h3 class="font-headline-xl uppercase" style="margin-bottom: 24px; line-height: 1.1;">Partner With Global
-          Experts</h3>
-        <p class="font-body-md text-on-surface-variant"
-          style="color: var(--color-on-surface-variant); margin-bottom: 40px; max-width: 640px; margin-left: auto; margin-right: auto;">
-          We bring technical excellence and structural integrity to every project, regardless of scale.
-        </p>
-        <div style="display: flex; flex-direction: column; gap: 16px; max-width: 320px; margin: 0 auto;">
-          <a href="#competencies" class="btn-primary brutalist-border brutalist-shadow"
-            style="justify-content: center; padding: 16px 24px;">Explore Our Solutions</a>
-          <a href="contact.html" class="btn-secondary brutalist-border brutalist-shadow"
-            style="justify-content: center; padding: 16px 24px;">Contact Divisions</a>
+          <!-- Hub 3: Mumbai -->
+          <div class="global-hub-card">
+            <div>
+              <div class="hub-card-header">
+                <div>
+                  <h4 class="hub-city-name">Mumbai</h4>
+                  <div class="hub-country">India</div>
+                </div>
+                <span class="hub-status-pill">
+                  <span class="hub-status-dot"></span> Strategic Hub
+                </span>
+              </div>
+              <p class="hub-body">
+                Premier technical liaison gateway coordinating precision heavy fabrication, quality assurance, maritime export logistics, and domestic industrial delivery.
+              </p>
+            </div>
+            <div class="hub-tags">
+              <span class="hub-tag">Technical Gateway</span>
+              <span class="hub-tag">Maritime Shipping</span>
+              <span class="hub-tag">Procurement</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -447,11 +430,9 @@
           <div class="col__block">
             <a class="footer__title" href="businesses.html">Divisions</a>
             <div class="footer__list">
-              <div class="link__item"><a href="businesses.html#construction">Infrastructure</a></div>
-              <div class="link__item"><a href="businesses.html#energy">Energy</a></div>
-              <div class="link__item"><a href="businesses.html#manufacturing">Hydrocarbons</a></div>
               <div class="link__item"><a href="businesses.html#manufacturing">Manufacturing</a></div>
-              <div class="link__item"><a href="businesses.html">Services</a></div>
+              <div class="link__item"><a href="products.html">Products</a></div>
+              <div class="link__item"><a href="businesses.html#services">Services</a></div>
             </div>
           </div>
 
@@ -460,9 +441,7 @@
             <a class="footer__title" href="careers.html">Careers</a>
             <div class="footer__list">
               <div class="link__item"><a href="careers.html#overview">Overview</a></div>
-              <div class="link__item"><a href="careers.html#campus">Campus Engage</a></div>
               <div class="link__item"><a href="careers.html#learning">Learning &amp; Development</a></div>
-              <div class="link__item"><a href="careers.html#diversity">Diversity, Equity &amp; Inclusion</a></div>
               <div class="link__item"><a href="careers.html#renew">Renew</a></div>
             </div>
           </div>

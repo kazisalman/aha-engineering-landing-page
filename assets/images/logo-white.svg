@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 454 100" width="100%" height="100%">
   <defs>
     <!-- Mask to create the gaps around the diagonal line -->
-    <mask id="logo-mask">
+    <mask id="logo-mask-white">
       <!-- Everything white is visible -->
       <rect x="0" y="0" width="454" height="100" fill="white" />
       <!-- Black diagonal bar cuts out the gap -->
@@ -12,19 +12,19 @@
   <!-- Logo Mark (Circle + AHA + Diagonal line) -->
   <g class="logo-mark">
     <!-- Circle with mask to create gaps -->
-    <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-width="6" fill="none" mask="url(#logo-mask)" />
+    <circle cx="50" cy="50" r="38" stroke="#ffffff" stroke-width="6" fill="none" mask="url(#logo-mask-white)" />
     
     <!-- Text inside with mask to create gaps -->
-    <g mask="url(#logo-mask)">
-      <text x="50" y="57" font-family="'Hanken Grotesk', 'Inter', sans-serif" font-weight="900" font-size="22" fill="currentColor" text-anchor="middle" letter-spacing="1">AHA</text>
+    <g mask="url(#logo-mask-white)">
+      <text x="50" y="57" font-family="'Hanken Grotesk', 'Inter', sans-serif" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle" letter-spacing="1">AHA</text>
     </g>
     
     <!-- Diagonal line (drawn without mask) -->
-    <line x1="13" y1="87" x2="87" y2="13" stroke="currentColor" stroke-width="6" stroke-linecap="butt" />
+    <line x1="13" y1="87" x2="87" y2="13" stroke="#ffffff" stroke-width="6" stroke-linecap="butt" />
   </g>
 
   <!-- Logo Text Area -->
-  <g class="logo-text" fill="currentColor">
+  <g class="logo-text" fill="#ffffff">
     <!-- AHA ENGINEERING -->
     <text x="105" y="48" font-family="'Hanken Grotesk', sans-serif" font-style="italic">
       <tspan font-weight="900" font-size="38" letter-spacing="-0.02em">AHA </tspan>
