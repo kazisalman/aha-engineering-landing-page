@@ -830,7 +830,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 768px) {
   .global-reach-wrapper {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
