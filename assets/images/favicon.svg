@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <mask id="favicon-mask">
+      <rect x="0" y="0" width="100" height="100" fill="white" />
+      <line x1="10" y1="90" x2="90" y2="10" stroke="black" stroke-width="12" stroke-linecap="square" />
+    </mask>
+  </defs>
+  <circle cx="50" cy="50" r="42" stroke="#00328a" stroke-width="7" fill="none" mask="url(#favicon-mask)" />
+  <g mask="url(#favicon-mask)">
+    <text x="50" y="58" font-family="'Hanken Grotesk', 'Inter', -apple-system, sans-serif" font-weight="900" font-size="24" fill="#00328a" text-anchor="middle" letter-spacing="1">AHA</text>
+  </g>
+  <line x1="10" y1="90" x2="90" y2="10" stroke="#00328a" stroke-width="7" stroke-linecap="butt" />
+</svg>
